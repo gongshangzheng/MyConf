@@ -12,3 +12,6 @@
 ./files_to_add.txt
 ./safe-push.sh
 ./README.md
+./*rc
+./.git*
+./config-env.sh
