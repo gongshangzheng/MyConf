@@ -1,0 +1,14 @@
+./alacritty
+./autokey
+./bspwm
+./keyd
+./keyd-default.conf
+./polybar/scripts
+./polybar/launch.sh
+./polybar/hack
+./qutebrowser
+./shell_gpt
+./sxhkd
+./files_to_add.txt
+./safe-push.sh
+./README.md
