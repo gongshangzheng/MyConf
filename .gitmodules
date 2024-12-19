@@ -1,0 +1,3 @@
+[submodule "ibus/rime"]
+	path = ibus/rime
+	url = git@github.com:gongshangzheng/my_rime.git
