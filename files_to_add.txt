@@ -15,3 +15,5 @@
 ./*rc
 ./.git*
 ./config-env.sh
+./tab
+./.hypermenu

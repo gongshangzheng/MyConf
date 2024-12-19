@@ -53,11 +53,15 @@ settings:
   content.javascript.can_open_tabs_automatically:
     global: true
   content.javascript.clipboard:
+    https://chatgpt.com: access-paste
     https://github.com: access-paste
   content.javascript.enabled:
     global: true
   content.notifications.enabled:
     https://blog.csdn.net: false
+  content.register_protocol_handler:
+    https://calendar.google.com?cid=%25s: true
+    https://mail.google.com?extsrc=mailto&url=%25s: true
   downloads.remove_finished:
     global: -1
   editor.command:
@@ -75,3 +79,7 @@ settings:
     - -e
     - ranger
     - --choosedir={}
+  url.default_page:
+    global: file:///home/xinyu/MyConf/tab/index.html
+  url.start_pages:
+    global: file:///home/xinyu/MyConf/tab/index.html

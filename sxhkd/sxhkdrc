@@ -7,11 +7,12 @@ super + Return
 	alacritty
 
 # program launcher
-super + d
-	dmenu_run
+super + g
+	bash hypermenu &
+	#dmenu_run
 
-super + q
-	qutebrowser
+#super + q
+	#qutebrowser
 
 # make sxhkd reload its configuration files:
 
@@ -50,8 +51,8 @@ super + y
 	bspc node newest.marked.local -n newest.!automatic.local
 
 # swap the current node and the biggest window
-super + g
-	bspc node -s biggest.window
+#super + g
+	#bspc node -s biggest.window
 
 #
 # state/flags

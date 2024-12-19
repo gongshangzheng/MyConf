@@ -30,3 +30,4 @@ if xrandr -q | grep "HDMI-1-0 connected"; then
     #alacritty &
 fi
 
+feh --bg-fill $HOME/Downloads/blue-sky/wallpapers/blue3.png
