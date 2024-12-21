@@ -60,6 +60,7 @@ settings:
     global: true
   content.notifications.enabled:
     https://blog.csdn.net: false
+    https://www.youtube.com: true
   content.register_protocol_handler:
     https://calendar.google.com?cid=%25s: true
     https://mail.google.com?extsrc=mailto&url=%25s: true
