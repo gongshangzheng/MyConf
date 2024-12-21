@@ -2,19 +2,12 @@
 # ================================================================
 #   Copyright (C) 2024 www.361way.com site All rights reserved.
 #
-#   Filename      ：git-push.sh
+#   Filename      ：current-dir.sh
 #   Author        ：yangbk <itybku@139.com>
-#   Create Time   ：2024-12-19 00:58
+#   Create Time   ：2024-12-20 22:50
 #   Description   ：
 # ================================================================
 
-# read every lines in files_to_add.txt, if it begins with #, ignore it
-# if it doesn't begin with #, add it to git
+parent_dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd -P )
 
-if [ -z "$1" ]; then
-    git commit
-else
-    git commit -m "$1"
-fi
-
-git push origin master
+echo $parent_dir

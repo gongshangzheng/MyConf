@@ -1,1 +1,1 @@
-/home/xinyu/scripts/utils/assets/qutebrowser-config.py
+/home/xinyu/scripts/sys_config/assets/qutebrowser-config.py
