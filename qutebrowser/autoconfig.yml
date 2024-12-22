@@ -36,6 +36,7 @@ settings:
         <Ctrl+x><Ctrl+e>: open-editor
         <Escape>: mode-leave ;; jseval -q document.activeElement.blur()
       normal:
+        ',m': spawn umpv {url}
         <Ctrl+g>: fake-key <Esc>
         <Ctrl+x><Ctrl+e>: :config-edit
         J: :tab-prev
