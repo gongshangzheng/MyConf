@@ -4,3 +4,5 @@ m qute://help/img/cheatsheet-big.png
 c https://chatgpt.com/
 mail https://mail.centralelille.fr/zimbra/mail#1
 zimbra https://mail.centralelille.fr/zimbra/mail#1
+syncthing http://127.0.0.1:8384/
+syncthing server http://87.106.191.101:8384/#
