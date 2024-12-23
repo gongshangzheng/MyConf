@@ -38,6 +38,7 @@ settings:
       normal:
         ',m': spawn umpv {url}
         <Ctrl+g>: fake-key <Esc>
+        <Ctrl+i>: edit-text
         <Ctrl+x><Ctrl+e>: :config-edit
         J: :tab-prev
         K: :tab-next

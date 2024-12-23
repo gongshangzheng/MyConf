@@ -6,3 +6,8 @@ mail https://mail.centralelille.fr/zimbra/mail#1
 zimbra https://mail.centralelille.fr/zimbra/mail#1
 syncthing http://127.0.0.1:8384/
 syncthing server http://87.106.191.101:8384/#
+ttrss http://87.106.191.101:181/#f=-3&c=0
+rss filter https://help.rss.app/en/articles/10261034-how-to-use-regular-expression-regex-to-filter-rss-feeds
+bookmark http://16.171.150.115:9090/bookmarks
+linkding http://16.171.150.115:9090/bookmarks
+ld http://16.171.150.115:9090/bookmarks
