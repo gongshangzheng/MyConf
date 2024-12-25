@@ -11,6 +11,7 @@ settings:
   colors.webpage.darkmode.enabled:
     global: true
   content.javascript.clipboard:
+    https://emacs-china.org: access-paste
     https://github.com: access-paste
   content.pdfjs:
     global: true
