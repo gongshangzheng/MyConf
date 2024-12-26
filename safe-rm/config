@@ -17,7 +17,7 @@
 # It defaults to 'no'.
 # Pay attention that any value that starts with 'y' or 'Y' will be treated as 'yes'.
 # -----------------------------------------------
-# export SAFE_RM_PERM_DEL_FILES_IN_TRASH=yes
+export SAFE_RM_PERM_DEL_FILES_IN_TRASH=y
 
 #
 # If you want to disable the use of AppleScript for moving files to the trash,
