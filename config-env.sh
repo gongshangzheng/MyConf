@@ -68,7 +68,7 @@ function link_config(){
         return
     fi
     if [ ! -d $HOME/.config/$1 ]; then
-        ln $HOME/MyConf/$1 $HOME/.config/$1
+        ln -s $HOME/MyConf/$1 $HOME/.config/$1
     else
         # ask user
         echo "You have already installed $1 config, do you want to replace it?"
