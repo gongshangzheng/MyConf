@@ -13,6 +13,7 @@ settings:
   content.javascript.clipboard:
     https://emacs-china.org: access-paste
     https://github.com: access-paste
+    https://starship.rs: access-paste
   content.pdfjs:
     global: true
   content.plugins:
