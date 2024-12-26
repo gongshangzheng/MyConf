@@ -16,6 +16,16 @@ if [ ! -d $HOME/.config ]; then
 fi
 #cd MyConf
 
+function fonts(){
+    if [ ! -d $HOME/MyConf/fonts ]; then
+        echo "There is no fonts in MyConf"
+        return
+    fi
+    if [ ! -d $HOME/.local/share/fonts ]; then
+        mkdir $HOME/.local/share/fonts
+    fi
+    cp $HOME/MyConf/fonts/*/*.ttf $HOME/.local/share/fonts
+}
 function file_to_link(){
     # get the path of the file/dir, move it to MyConf, Link it back to its path
     # if the file/dir exists, ask user if he wants to replace it
@@ -82,6 +92,8 @@ function link_config(){
         fi
     fi
 }
+
+
 parent_path=$( cd "$(dirname "${bash_source[0]}")" ; pwd -P )
 #printf "Config path: %s\n" $parent_path
 
@@ -91,6 +103,7 @@ case $1 in
     "all")
         bash $0 rcs
         bash $0 configs
+        bash $0 fonts
         ;;
     rcs)
         #link_rc .zshrc
@@ -111,6 +124,9 @@ case $1 in
         link_config qutebrowser
         link_config polybar
         link_config shell_gpt
+        ;;
+    fonts)
+        fonts
         ;;
     rc)
         link_rc $2
