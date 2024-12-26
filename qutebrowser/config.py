@@ -12,7 +12,7 @@ import subprocess
 import os
 from qutebrowser.api import interceptor
 import sys
-import catppuccin
+import theme
 
 # ================== Theme ======================= {{{
 
@@ -24,7 +24,7 @@ config.load_autoconfig()
 # set the flavor you'd like to use
 # valid options are 'mocha', 'macchiato', 'frappe', and 'latte'
 # last argument (optional, default is False): enable the plain look for the menu rows
-catppuccin.setup(c, 'mocha', True)
+theme.setup(c, 'mocha', True)
 
 c.content.user_stylesheets = ['~/.config/qutebrowser/css/mocha-all-sites.css']
 config.bind('<Ctrl-R>', 'config-cycle content.user_stylesheets "~/.config/qutebrowser/css/apprentice-all-sites.css" "~/.config/qutebrowser/css/darculized-all-sites.css" "~/.config/qutebrowser/css/gruvbox-all-sites.css" "~/.config/qutebrowser/css/solarized-dark-all-sites.css" "~/.config/qutebrowser/css/solarized-light-all-sites.css" "~/.config/qutebrowser/css/mocha-all-sites.css" "~/.config/qutebrowser/css/latte-all-sites.css"')
