@@ -1,2 +1,3 @@
 ibus/
 nvim/undodir/
+!qutebrowser/catppuccin/setup.py
