@@ -18,4 +18,4 @@ settings:
   content.plugins:
     global: true
   content.user_stylesheets:
-    global: ~/.config/qutebrowser/css/mocha-all-sites.css
+    global: ~/.config/qutebrowser/css/latte-all-sites.css
