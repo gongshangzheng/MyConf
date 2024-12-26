@@ -11,6 +11,7 @@
 import subprocess
 import os
 from qutebrowser.api import interceptor
+import sys
 import catppuccin
 
 # ================== Theme ======================= {{{
@@ -31,7 +32,19 @@ config.bind('<Ctrl-R>', 'config-cycle content.user_stylesheets "~/.config/qutebr
 config.bind('<t><t>', 'set colors.webpage.darkmode.enabled true')
 config.bind('<t><f>', 'set colors.webpage.darkmode.enabled false')
 
-editor_value = "gvim" # or "gvim"
+if sys.platform.startswith('darwin'):
+    editor.command = ["mvim", "-f", "{file}", "-c", "normal {line}G{column0}1"]
+    editor_value = "mvim"
+else:
+    editor_value = "gvim" # or "gvim"
+    # editor_value,
+    c.editor.command = [
+        "gvim",
+        "-f",
+        "{file}",
+        "-c",
+        "normal {line}G{column0}1",
+    ]
 browser_value = "qutebrowser"
 
 # }}}
@@ -43,7 +56,7 @@ def filter_yt(info: interceptor.Request):
     if (
         url.host() == "www.youtube.com"
         and url.path() == "/get_video_info"
-        and "&adformat=" in url.query()
+            and "&adformat=" in url.query()
     ):
         info.block()
 
@@ -56,20 +69,13 @@ config.bind("<y><o>", "yank inline [[{url}][{title}]]")
 # }}}
 # ====================== Open Notes From Qutebrowser ====== {{{
 
-    #``os.environ["TERMINAL"] + " -e " +
+#``os.environ["TERMINAL"] + " -e " +
 # }}}
 
 # ======================= Redline Insert Mode ============= {{{
 # Awesome way to open vim from qutebrowser
 #
-# editor_value,
-c.editor.command = [
-    "gvim",
-    "-f",
-    "{file}",
-    "-c",
-    "normal {line}G{column0}1",
-]
+
 config.bind(",m", "spawn umpv {url}")
 config.bind("<c><s>", "config-source")
 config.bind("<Ctrl-i>", "edit-text")
