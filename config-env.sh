@@ -88,7 +88,7 @@ function link_config(){
         fi
         if [ "$replace"  =  "yes" ]; then
             rm -rf $HOME/.config/$1
-            ln $HOME/MyConf/$1 $HOME/.config/$1
+            ln -s $HOME/MyConf/$1 $HOME/.config/$1
         fi
     fi
 }
@@ -106,7 +106,7 @@ case $1 in
         bash $0 fonts
         ;;
     rcs)
-        #link_rc .zshrc
+        link_rc .zshrc
         link_rc .bashrc
         link_rc .xinitrc
         link_rc .yarnrc

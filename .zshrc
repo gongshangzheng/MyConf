@@ -174,7 +174,7 @@ eval "$(zoxide init zsh)"
 
 # NOTE: FZF
 # Set up fzf key bindings and fuzzy completion
-#eval "$(fzf --zsh)"
+# eval "$(fzf --zsh)"
 
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git "
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
