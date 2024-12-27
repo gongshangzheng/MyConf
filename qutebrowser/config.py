@@ -84,31 +84,53 @@ config.bind(";M", "hint --rapid links spawn umpv {hint-url}")
 config.bind("<Ctrl-h>", "fake-key <Backspace>", "insert")
 config.bind("<Ctrl-a>", "fake-key <Home>", "insert")
 config.bind("<Ctrl-e>", "fake-key <End>", "insert")
-# config.bind("<Ctrl-e>", "fake-key <Ctrl-u>", "normal")
 config.bind("<Ctrl-b>", "fake-key <Left>", "insert")
 config.bind("<Mod1-b>", "fake-key <Ctrl-Left>", "insert")
 config.bind("<Ctrl-f>", "fake-key <Right>", "insert")
 config.bind("<Mod1-f>", "fake-key <Ctrl-Right>", "insert")
 config.bind("<Ctrl-p>", "fake-key <Up>", "insert")
 config.bind("<Ctrl-n>", "fake-key <Down>", "insert")
+config.bind("<Ctrl-f>", "fake-key <Right>")
+config.bind("<Ctrl-b>", "fake-key <Left>")
+config.bind("<Ctrl-p>", "fake-key <Up>")
+config.bind("<Ctrl-n>", "fake-key <Down>")
 config.bind("<Mod1-d>", "fake-key <Ctrl-Delete>", "insert")
 config.bind("<Ctrl-d>", "fake-key <Delete>", "insert")
 config.bind("<Ctrl-w>", "fake-key <Ctrl-Backspace>", "insert")
 config.bind("<Ctrl-u>", "fake-key <Shift-Home><Delete>", "insert")
 config.bind("<Ctrl-k>", "fake-key <Shift-End><Delete>", "insert")
+
+# insert wandering
+config.bind("<Ctrl-e>", "scroll-page 0 -0.5", "normal")
+config.bind("<Ctrl-s>", "scroll down", "normal")
+config.bind("<Ctrl-w>", "scroll up", "normal")
+# config.bind("<Ctrl-s>", "scro
+config.bind("<Alt-x>", "cmd-edit", "normal")
+
 config.bind("ab", "open -t http://16.171.150.115:9090/bookmarks/new?url={url}")
 config.bind("gr", "open -t http://87.106.191.101:181/public.php?op=bookmarklets--subscribe&&feed_url={url}")
 config.bind("gc", "config-edit")
 config.bind("ge", "edit-text")
-config.bind("gh", "spawn firefox {url}")
+config.bind("D", "quickmark-load kill-element")
 config.bind("J", "tab-prev")
 config.bind("K", "tab-next")
 config.bind("<Ctrl+g>", "fake-key <Esc>")
 config.bind("<Space>", "fake-key :")
 config.bind("gz", "zotero")
 config.bind("gs", "doi")
-config.bind('\\u', 'hint links spawn -u untrack-url -O {hint-url}')
-config.bind('\\U', 'spawn -u untrack-url -p {clipboard}')
+config.bind("\\f", "spawn firefox {url}")
+config.bind("\\m", "quickmark-load mainonly")
+config.bind("\\t", "quickmark-load translate")
+with config.pattern('*://*.youtube.com/*') as p:
+    config.bind('\\u', 'hint links spawn -u untrack-url -O {hint-url}')
+    config.bind('\\U', 'spawn -u untrack-url -p {clipboard}')
+with config.pattern('*://*.zhihu.com/*') as p:
+    # p.content.images = False
+    config.bind('\\k', 'quickmark-load kill-element')
+    config.bind('\\c', 'quickmark-load clean-zhihu')
+
+with config.pattern('*://*.github.com/*') as p:
+    config.bind('\\g', 'spawn git clone {url} --depth=1 ~/application/')
 c.aliases = {'w': 'session-save',
              'q': 'close',
              'qa': 'quit',
@@ -119,8 +141,6 @@ c.aliases = {'w': 'session-save',
              'untrack-url': 'spawn -u untrack-url -p {clipboard}',
              'tm': 'spawn -u tab-manager /sessions/ open -f',
              'meta': 'spawn --userscript script-runner.py',
-             'word-cound': 'jseval javascript:(function() {  var text = document.body.innerText || document.body.textContent;  var words = text.trim().split(/\s+/).length;  alert("Word Count: " + words);})();',
-             'element-highlighter': 'jseval javascript:(function(){  function getRandomColor() {    var letters = "0123456789ABCDEF";    var color = "#";    for (var i = 0; i < 6; i++) {      color += letters[Math.floor(Math.random() * 16)];    }    return color;  }  function getContrastingColor(color) {    var hex = color.slice(1);    var r = parseInt(hex.substr(0, 2), 16);    var g = parseInt(hex.substr(2, 2), 16);    var b = parseInt(hex.substr(4, 2), 16);    var yiq = (r * 299 + g * 587 + b * 114) / 1000;    return yiq >= 128 ? "#000000" : "#FFFFFF";  }  function applyRandomStyle(element) {    var randomColor = getRandomColor();    element.style.backgroundColor = randomColor;    element.style.color = getContrastingColor(randomColor);  }  var elements = document.getElementsByTagName("*");  for (var i = 0; i < elements.length; i++) {    applyRandomStyle(elements[i]);  }})();',
              'page-performance': 'jseval javascript:window.location=\'https://developers.google.com/speed/pagespeed/insights/?url={url};\'',
              'email-personal': 'jseval javascript:(function() {  const email = "personal.xinyuzheng@gmail.com";  const dummyElement = document.createElement("textarea");  document.body.appendChild(dummyElement);  dummyElement.value = email;  dummyElement.select();  document.execCommand("copy");  document.body.removeChild(dummyElement);})();',
              'email-working': 'jseval javascript:(function() {  const email = "xinyuzheng31@gmail.com";  const dummyElement = document.createElement("textarea");  document.body.appendChild(dummyElement);  dummyElement.value = email;  dummyElement.select();  document.execCommand("copy");  document.body.removeChild(dummyElement);})();',
