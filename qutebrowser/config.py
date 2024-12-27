@@ -84,6 +84,7 @@ config.bind(";M", "hint --rapid links spawn umpv {hint-url}")
 config.bind("<Ctrl-h>", "fake-key <Backspace>", "insert")
 config.bind("<Ctrl-a>", "fake-key <Home>", "insert")
 config.bind("<Ctrl-e>", "fake-key <End>", "insert")
+# config.bind("<Ctrl-e>", "fake-key <Ctrl-u>", "normal")
 config.bind("<Ctrl-b>", "fake-key <Left>", "insert")
 config.bind("<Mod1-b>", "fake-key <Ctrl-Left>", "insert")
 config.bind("<Ctrl-f>", "fake-key <Right>", "insert")
@@ -99,15 +100,71 @@ config.bind("ab", "open -t http://16.171.150.115:9090/bookmarks/new?url={url}")
 config.bind("gr", "open -t http://87.106.191.101:181/public.php?op=bookmarklets--subscribe&&feed_url={url}")
 config.bind("gc", "config-edit")
 config.bind("ge", "edit-text")
+config.bind("gh", "spawn firefox {url}")
 config.bind("J", "tab-prev")
 config.bind("K", "tab-next")
 config.bind("<Ctrl+g>", "fake-key <Esc>")
+config.bind("<Space>", "fake-key :")
 config.bind("gz", "zotero")
+config.bind("gs", "doi")
+config.bind('\\u', 'hint links spawn -u untrack-url -O {hint-url}')
+config.bind('\\U', 'spawn -u untrack-url -p {clipboard}')
 c.aliases = {'w': 'session-save',
              'q': 'close',
              'qa': 'quit',
              'wq': 'quit --save',
              'wqa': 'quit --save',
-             'zotero': 'spawn --userscript zotero'}
+             'zotero': 'spawn --userscript zotero',
+             'doi': 'spawn --userscript doi',
+             'untrack-url': 'spawn -u untrack-url -p {clipboard}',
+             'tm': 'spawn -u tab-manager /sessions/ open -f',
+             'meta': 'spawn --userscript script-runner.py',
+             'word-cound': 'jseval javascript:(function() {  var text = document.body.innerText || document.body.textContent;  var words = text.trim().split(/\s+/).length;  alert("Word Count: " + words);})();',
+             'element-highlighter': 'jseval javascript:(function(){  function getRandomColor() {    var letters = "0123456789ABCDEF";    var color = "#";    for (var i = 0; i < 6; i++) {      color += letters[Math.floor(Math.random() * 16)];    }    return color;  }  function getContrastingColor(color) {    var hex = color.slice(1);    var r = parseInt(hex.substr(0, 2), 16);    var g = parseInt(hex.substr(2, 2), 16);    var b = parseInt(hex.substr(4, 2), 16);    var yiq = (r * 299 + g * 587 + b * 114) / 1000;    return yiq >= 128 ? "#000000" : "#FFFFFF";  }  function applyRandomStyle(element) {    var randomColor = getRandomColor();    element.style.backgroundColor = randomColor;    element.style.color = getContrastingColor(randomColor);  }  var elements = document.getElementsByTagName("*");  for (var i = 0; i < elements.length; i++) {    applyRandomStyle(elements[i]);  }})();',
+             'page-performance': 'jseval javascript:window.location=\'https://developers.google.com/speed/pagespeed/insights/?url={url};\'',
+             'email-personal': 'jseval javascript:(function() {  const email = "personal.xinyuzheng@gmail.com";  const dummyElement = document.createElement("textarea");  document.body.appendChild(dummyElement);  dummyElement.value = email;  dummyElement.select();  document.execCommand("copy");  document.body.removeChild(dummyElement);})();',
+             'email-working': 'jseval javascript:(function() {  const email = "xinyuzheng31@gmail.com";  const dummyElement = document.createElement("textarea");  document.body.appendChild(dummyElement);  dummyElement.value = email;  dummyElement.select();  document.execCommand("copy");  document.body.removeChild(dummyElement);})();',
+             'analyze-site': 'jseval javascript:(function() { var currentSite = window.location.hostname; var redirectUrl = "https://w3techs.com/sites/info/" + currentSite; window.location.href = redirectUrl; })();',
+             'web2pdf': "open -t https://www.web2pdfconvert.com#{url}",
+             'short-link': "open -t https://zzb.bz/bookmark/?url={url}",
+}
 # config.bind("<Ctrl-x><Ctrl-e>", "config-edit")
+# }}}
+
+# def redirect(info: interceptor.Request, domain, new_domain):
+    # if info.request_url.host() == domain:
+        # new_url = info.request_url
+        # new_url.setHost(new_domain)
+        # try:
+            # info.redirect(new_url)
+        # except interceptors.RedirectFailedException:
+            # pass
+
+
+# def intercept(info: interceptor.Request):
+    # redirect(info, "youtube.com", "yewtu.be")
+    # redirect(info, "www.youtube.com", "yewtu.be")
+
+    # redirect(info, "twitter.com", "nitter.it")
+    # redirect(info, "www.twitter.com", "nitter.it")
+
+# interceptor.register(intercept)
+
+# {{{ tab manager
+# - general bind, to manually enter commands, flags and arguments
+config.bind("zg", "set-cmd-text -s :spawn --userscript tab-manager sessions/")
+# - open one or more sessions as HTML, or open index
+config.bind("zo", "set-cmd-text -s :spawn --userscript tab-manager sessions/ open -f")
+# - restore specified sessions, or the current open HTML file if it is a valid session
+config.bind("zr", "set-cmd-text -s :spawn --userscript tab-manager sessions/ restore -f")
+# - restore, same as above but close all open tabs first
+config.bind("zR", "set-cmd-text -s :spawn --userscript tab-manager sessions/  restore -c -f")
+# - save all and overwrite specified session (update session, don't append):
+config.bind("za", "set-cmd-text -s :spawn --userscript tab-manager sessions/ save-all -o -f")
+# - append current focused tab to specified session
+config.bind("zs", "set-cmd-text -s :spawn --userscript tab-manager sessions/ save -f")
+# - delete session
+config.bind("zD", "set-cmd-text -s :spawn --userscript tab-manager sessions/ delete -f")
+# - open this file
+config.bind("zh", "spawn --userscript tab-manager sessions/ help")
 # }}}
