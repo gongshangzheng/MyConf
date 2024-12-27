@@ -11,12 +11,16 @@ settings:
   colors.webpage.darkmode.enabled:
     global: true
   content.javascript.clipboard:
+    https://chatgpt.com: access-paste
     https://emacs-china.org: access-paste
     https://github.com: access-paste
     https://starship.rs: access-paste
+    https://www.runningcheese.com: access-paste
   content.pdfjs:
     global: true
   content.plugins:
     global: true
   content.user_stylesheets:
-    global: ~/.config/qutebrowser/css/latte-all-sites.css
+    global: ~/.config/qutebrowser/css/mocha-all-sites.css
+  tabs.show:
+    global: multiple
