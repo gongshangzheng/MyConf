@@ -125,6 +125,8 @@ config.bind("gs", "doi")
 config.bind("\\f", "spawn firefox {url}")
 config.bind("\\m", "quickmark-load mainonly")
 config.bind("\\t", "quickmark-load translate")
+config.bind("<Ctrl+r>", "quickmark-load roam")
+config.bind("<Ctrl-r>", "open javascript:location.href='org-protocol://roam-ref?template=r&ref='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title)")
 with config.pattern('*://*.youtube.com/*') as p:
     config.bind('\\u', 'hint links spawn -u untrack-url -O {hint-url}')
     config.bind('\\U', 'spawn -u untrack-url -p {clipboard}')
@@ -192,4 +194,3 @@ config.bind("zD", "set-cmd-text -s :spawn --userscript tab-manager sessions/ del
 # - open this file
 config.bind("zh", "spawn --userscript tab-manager sessions/ help")
 # }}}
-config.bind("<Ctrl-r>", "open javascript:location.href='org-protocol://roam-ref?template=r&ref='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title)")
