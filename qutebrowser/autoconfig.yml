@@ -16,6 +16,8 @@ settings:
     https://github.com: access-paste
     https://starship.rs: access-paste
     https://www.runningcheese.com: access-paste
+  content.notifications.enabled:
+    https://blog.csdn.net: true
   content.pdfjs:
     global: true
   content.plugins:
