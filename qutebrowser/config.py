@@ -1,3 +1,4 @@
+
 # coding=utf8
 #!/usr/bin/env python
 # ===============================================================================
@@ -101,9 +102,12 @@ config.bind("<Ctrl-u>", "fake-key <Shift-Home><Delete>", "insert")
 config.bind("<Ctrl-k>", "fake-key <Shift-End><Delete>", "insert")
 
 # insert wandering
-config.bind("<Ctrl-e>", "scroll-page 0 -0.5", "normal")
-config.bind("<Ctrl-s>", "scroll down", "normal")
-config.bind("<Ctrl-w>", "scroll up", "normal")
+config.bind("e", "scroll-page 0 -0.5", "normal")
+config.bind("d", "scroll-page 0 0.5", "normal")
+config.bind("s", "scroll down", "normal")
+config.bind("w", "scroll up", "normal")
+config.bind("x", "tab-close", "normal")
+config.bind("X", "undo", "normal")
 # config.bind("<Ctrl-s>", "scro
 config.bind("<Alt-x>", "cmd-edit", "normal")
 
@@ -115,7 +119,7 @@ config.bind("D", "quickmark-load kill-element")
 config.bind("J", "tab-prev")
 config.bind("K", "tab-next")
 config.bind("<Ctrl+g>", "fake-key <Esc>")
-config.bind("<Space>", "fake-key :")
+# config.bind("<Space>bd", "cmd-edit")
 config.bind("gz", "zotero")
 config.bind("gs", "doi")
 config.bind("\\f", "spawn firefox {url}")
@@ -188,3 +192,4 @@ config.bind("zD", "set-cmd-text -s :spawn --userscript tab-manager sessions/ del
 # - open this file
 config.bind("zh", "spawn --userscript tab-manager sessions/ help")
 # }}}
+config.bind("<Ctrl-r>", "open javascript:location.href='org-protocol://roam-ref?template=r&ref='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title)")
