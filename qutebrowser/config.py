@@ -34,7 +34,7 @@ config.bind('<t><t>', 'set colors.webpage.darkmode.enabled true')
 config.bind('<t><f>', 'set colors.webpage.darkmode.enabled false')
 
 if sys.platform.startswith('darwin'):
-    editor.command = ["mvim", "-f", "{file}", "-c", "normal {line}G{column0}1"]
+    c.editor.command = ["mvim", "-f", "{file}", "-c", "normal {line}G{column0}1"]
     editor_value = "mvim"
 else:
     editor_value = "gvim" # or "gvim"
