@@ -598,7 +598,7 @@ const commands = {
   // Help
   'help': (args) => {
     newTab = true;
-    redirect('https://github.com/koryschneider/tab#readme');
+    redirect('https://github.com/KorySchneider/tab/blob/master/doc/commands.md#link');
   },
 
   // Google
