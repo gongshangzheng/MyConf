@@ -57,7 +57,7 @@ maps.global = [
   },
   {
     alias: "cb",
-    map: "cb",
+    //map: "cb",
     category: categories.bookmarks,
     description: "Create bookmark in linkding",
     callback: () => {
@@ -70,8 +70,8 @@ maps.global = [
   },
   {
     alias: "roam",
-    map: "or",
-    category: categories.misc,
+    //map: "<Ctrl-i>",
+    category: categories.clipboard,
     description: "Copy text to Roam Research",
     callback: () => {
       // 获取当前页面的 URL 和标题
@@ -108,9 +108,9 @@ maps.global = [
       // 编码 URL，标题和选中的文本内容
       var body = getSelectedText();
       var protocolUrl = 'org-protocol://roam-ref?template=r'
-          + '&ref=' + encodeURIComponent(url)
-          + '&title=' + encodeURIComponent(title)
-          + '&body=' + encodeURIComponent(body);
+        + '&ref=' + encodeURIComponent(url)
+        + '&title=' + encodeURIComponent(title)
+        + '&body=' + encodeURIComponent(body);
 
       // 重定向到生成的 URL
       location.href = protocolUrl;
@@ -183,6 +183,17 @@ maps.global = [
     callback: () => Clipboard.write(window.location.href),
   },
   {
+    alias: "yo",
+    category: categories.clipboard,
+    description: "Copy current page title and URL in Emacs format",
+    callback: () => {
+      const title = document.title;
+      const url = window.location.href;
+      const emacsFormat = `[[${url}][${title}]]`;
+      Clipboard.write(emacsFormat);
+    },
+  },
+  {
     alias: "yI",
     category: categories.clipboard,
     description: "Copy Image URL",
@@ -193,9 +204,9 @@ maps.global = [
     category: categories.clipboard,
     description: "Copy link as Markdown",
     callback: () =>
-      util.createHints("a[href]", (a) =>
-        Clipboard.write(`[${a.innerText}](${a.href})`)
-      ),
+    util.createHints("a[href]", (a) =>
+      Clipboard.write(`[${a.innerText}](${a.href})`)
+    ),
   },
   {
     alias: "yO",
@@ -214,7 +225,7 @@ maps.global = [
     category: categories.tabs,
     description: "Duplicate current tab (non-active new tab)",
     callback: () =>
-      actions.openLink(window.location.href, { newTab: true, active: false }),
+    actions.openLink(window.location.href, { newTab: true, active: false }),
   },
   // TODO
   // {
@@ -252,14 +263,14 @@ maps.global = [
     category: categories.misc,
     description: "Lookup all information for domain",
     callback: () =>
-      actions.openLink(actions.getDnsInfoUrl({ all: true }), { newTab: true }),
+    actions.openLink(actions.getDnsInfoUrl({ all: true }), { newTab: true }),
   },
   {
     alias: "=c",
     category: categories.misc,
     description: "Show Google's cached version of page",
     callback: () =>
-      actions.openLink(actions.getGoogleCacheUrl(), { newTab: true }),
+    actions.openLink(actions.getGoogleCacheUrl(), { newTab: true }),
   },
   {
     alias: "=a",
@@ -278,7 +289,7 @@ maps.global = [
     category: categories.misc,
     description: "View social discussions for page",
     callback: () =>
-      actions.openLink(actions.getDiscussionsUrl(), { newTab: true }),
+    actions.openLink(actions.getDiscussionsUrl(), { newTab: true }),
   },
   {
     alias: "=S",
@@ -297,14 +308,14 @@ maps.global = [
     category: categories.misc,
     description: "Show BuiltWith report for page",
     callback: () =>
-      actions.openLink(actions.getBuiltWithUrl(), { newTab: true }),
+    actions.openLink(actions.getBuiltWithUrl(), { newTab: true }),
   },
   {
     alias: "=wa",
     category: categories.misc,
     description: "Show Wappalyzer report for page",
     callback: () =>
-      actions.openLink(actions.getWappalyzerUrl(), { newTab: true }),
+    actions.openLink(actions.getWappalyzerUrl(), { newTab: true }),
   },
   {
     alias: ";pd",
@@ -421,10 +432,10 @@ maps["www.google.com"] = [
     alias: "A",
     description: "Open search result (new tab)",
     callback: () =>
-      util.createHints(
-        googleSearchResultSelector,
-        actions.openAnchor({ newTab: true, active: false })
-      ),
+    util.createHints(
+      googleSearchResultSelector,
+      actions.openAnchor({ newTab: true, active: false })
+    ),
   },
   {
     alias: "d",
@@ -458,10 +469,10 @@ maps["duckduckgo.com"] = [
     alias: "A",
     description: "Open search result (non-active new tab)",
     callback: () =>
-      util.createHints(
-        ddgSelector,
-        actions.openAnchor({ newTab: true, active: false })
-      ),
+    util.createHints(
+      ddgSelector,
+      actions.openAnchor({ newTab: true, active: false })
+    ),
   },
   {
     leader: "",
@@ -500,10 +511,10 @@ maps["youtube.com"] = [
     alias: "A",
     description: "Open video",
     callback: () =>
-      util.createHints(
-        "*[id='video-title']",
-        actions.openAnchor({ newTab: true })
-      ),
+    util.createHints(
+      "*[id='video-title']",
+      actions.openAnchor({ newTab: true })
+    ),
   },
   {
     leader: "",
@@ -516,18 +527,18 @@ maps["youtube.com"] = [
     alias: "gH",
     description: "Goto homepage",
     callback: () =>
-      actions.openLink("https://www.youtube.com/feed/subscriptions?flow=2"),
+    actions.openLink("https://www.youtube.com/feed/subscriptions?flow=2"),
   },
   {
     leader: "",
     alias: "F",
     description: "Toggle fullscreen",
     callback: () =>
-      actions.dispatchMouseEvents(
-        document.querySelector("#movie_player .ytp-fullscreen-button"),
-        "mousedown",
-        "click"
-      ),
+    actions.dispatchMouseEvents(
+      document.querySelector("#movie_player .ytp-fullscreen-button"),
+      "mousedown",
+      "click"
+    ),
   },
   {
     leader: "",
@@ -540,7 +551,7 @@ maps["youtube.com"] = [
     alias: "Ym",
     description: "Copy YouTube video markdown link for current time",
     callback: () =>
-      Clipboard.write(actions.yt.getCurrentTimestampMarkdownLink()),
+    Clipboard.write(actions.yt.getCurrentTimestampMarkdownLink()),
   },
 ]
 
@@ -664,7 +675,7 @@ maps["github.com"] = [
     alias: "Y",
     description: "Copy Project Path (including domain)",
     callback: () =>
-      Clipboard.write(util.getURLPath({ count: 2, domain: true })),
+    Clipboard.write(util.getURLPath({ count: 2, domain: true })),
   },
   {
     alias: "l",
@@ -690,23 +701,23 @@ maps["github.com"] = [
     alias: "r",
     description: "View live raw version of file",
     callback: () =>
-      actions.gh
-        .selectFile({ directories: false })
-        .then((file) => actions.openLink(file.rawUrl, { newTab: true })),
+    actions.gh
+    .selectFile({ directories: false })
+    .then((file) => actions.openLink(file.rawUrl, { newTab: true })),
   },
   {
     alias: "yr",
     description: "Copy raw link to file",
     callback: () =>
-      actions.gh
-        .selectFile({ directories: false })
-        .then((file) => Clipboard.write(file.rawUrl)),
+    actions.gh
+    .selectFile({ directories: false })
+    .then((file) => Clipboard.write(file.rawUrl)),
   },
   {
     alias: "yf",
     description: "Copy link to file",
     callback: () =>
-      actions.gh.selectFile().then((file) => Clipboard.write(file.url)),
+    actions.gh.selectFile().then((file) => Clipboard.write(file.url)),
   },
   {
     alias: "gcp",
@@ -751,7 +762,7 @@ maps["gitlab.com"] = [
     alias: "Y",
     description: "Copy Project Path (including domain)",
     callback: () =>
-      Clipboard.write(util.getURLPath({ count: 2, domain: true })),
+    Clipboard.write(util.getURLPath({ count: 2, domain: true })),
   },
   {
     alias: "D",
@@ -765,7 +776,7 @@ maps["twitter.com"] = [
     alias: "f",
     description: "Follow user",
     callback: () =>
-      util.createHints("div[role='button'][data-testid$='follow']"),
+    util.createHints("div[role='button'][data-testid$='follow']"),
   },
   {
     alias: "s",
@@ -776,7 +787,7 @@ maps["twitter.com"] = [
     alias: "R",
     description: "Retweet",
     callback: () =>
-      util.createHints("div[role='button'][data-testid$='retweet']"),
+    util.createHints("div[role='button'][data-testid$='retweet']"),
   },
   {
     alias: "c",
@@ -787,11 +798,11 @@ maps["twitter.com"] = [
     alias: "T",
     description: "New tweet",
     callback: () =>
-      document
-        .querySelector(
-          "a[role='button'][data-testid='SideNav_NewTweet_Button']"
-        )
-        .click(),
+    document
+    .querySelector(
+      "a[role='button'][data-testid='SideNav_NewTweet_Button']"
+    )
+    .click(),
   },
   {
     alias: "u",
@@ -802,9 +813,9 @@ maps["twitter.com"] = [
     alias: "t",
     description: "Goto tweet",
     callback: () =>
-      util.createHints(
-        "article, article div[data-focusable='true'][role='link'][tabindex='0']"
-      ),
+    util.createHints(
+      "article, article div[data-focusable='true'][role='link'][tabindex='0']"
+    ),
   },
 ]
 
@@ -857,10 +868,10 @@ maps["reddit.com"] = [
     alias: "A",
     description: "View post (link) (non-active new tab)",
     callback: () =>
-      util.createHints(
-        ".title",
-        actions.openAnchor({ newTab: true, active: false })
-      ),
+    util.createHints(
+      ".title",
+      actions.openAnchor({ newTab: true, active: false })
+    ),
   },
   {
     alias: "c",
@@ -871,10 +882,10 @@ maps["reddit.com"] = [
     alias: "C",
     description: "View post (comments) (non-active new tab)",
     callback: () =>
-      util.createHints(
-        ".comments",
-        actions.openAnchor({ newTab: true, active: false })
-      ),
+    util.createHints(
+      ".comments",
+      actions.openAnchor({ newTab: true, active: false })
+    ),
   },
 ]
 
@@ -918,10 +929,10 @@ maps["news.ycombinator.com"] = [
     alias: "C",
     description: "View post (comments) (non-active new tab)",
     callback: () =>
-      util.createHints(
-        ".subline>a[href^='item']",
-        actions.openAnchor({ newTab: true, active: false })
-      ),
+    util.createHints(
+      ".subline>a[href^='item']",
+      actions.openAnchor({ newTab: true, active: false })
+    ),
   },
   {
     alias: "e",
@@ -958,9 +969,9 @@ maps["producthunt.com"] = [
     alias: "v",
     description: "View product",
     callback: () =>
-      util.createHints(
-        "ul[class^='postsList_'] > li > div[class^='item_'] > a"
-      ),
+    util.createHints(
+      "ul[class^='postsList_'] > li > div[class^='item_'] > a"
+    ),
   },
   {
     alias: "s",
@@ -989,10 +1000,10 @@ maps["behance.net"] = [
     alias: "A",
     description: "View project (non-active new tab)",
     callback: () =>
-      util.createHints(
-        ".rf-project-cover__title",
-        actions.openAnchor({ newTab: true, active: false })
-      ),
+    util.createHints(
+      ".rf-project-cover__title",
+      actions.openAnchor({ newTab: true, active: false })
+    ),
   },
 ]
 
@@ -1019,9 +1030,9 @@ maps["wikipedia.org"] = [
     alias: "a",
     description: "View page",
     callback: () =>
-      util.createHints(
-        "#bodyContent :not(sup):not(.mw-editsection) > a:not([rel=nofollow])"
-      ),
+    util.createHints(
+      "#bodyContent :not(sup):not(.mw-editsection) > a:not([rel=nofollow])"
+    ),
   },
   {
     alias: "e",
@@ -1347,7 +1358,7 @@ maps["ikea.com"] = [
     alias: "O",
     description: "Open Orders page",
     callback: () =>
-      actions.openLink("/us/en/customer-service/track-manage-order/"),
+    actions.openLink("/us/en/customer-service/track-manage-order/"),
   },
 ]
 
@@ -1399,8 +1410,8 @@ if (priv.doi_handler) {
   registerDOI("annualreviews.org", actions.doi.providers.meta_dcIdentifier_doi)
   registerDOI("apa.org", () =>
     document
-      .querySelector(".citation a")
-      ?.innerText?.replace(/^https:\/\/doi\.org\//, "")
+    .querySelector(".citation a")
+    ?.innerText?.replace(/^https:\/\/doi\.org\//, "")
   )
   registerDOI("ashpublications.org")
   registerDOI("asnjournals.org")
@@ -1416,8 +1427,8 @@ if (priv.doi_handler) {
   registerDOI("dl.acm.org", actions.doi.providers.meta_dcIdentifier_doi)
   registerDOI("elifesciences.org", () =>
     document
-      .querySelector("meta[name='dc.identifier']")
-      ?.content?.replace(/^doi:/, "")
+    .querySelector("meta[name='dc.identifier']")
+    ?.content?.replace(/^doi:/, "")
   )
   registerDOI("embopress.org")
   registerDOI("emerald.com", actions.doi.providers.meta_dcIdentifier_doi)
@@ -1434,8 +1445,8 @@ if (priv.doi_handler) {
   )
   registerDOI("ingentaconnect.com", () =>
     document
-      .querySelector("meta[name='DC.identifier']")
-      ?.content?.replace(/^info:doi\//, "")
+    .querySelector("meta[name='DC.identifier']")
+    ?.content?.replace(/^info:doi\//, "")
   )
   registerDOI("jacc.or", actions.doi.providers.meta_dcIdentifier_doi)
   registerDOI("jamanetwork.com")
