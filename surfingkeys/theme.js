@@ -123,7 +123,9 @@ const darkTheme = `
   #sk_omnibarSearchResult {
     border-top: 1px solid #545f6f !important;
   }
-
+  .sk_theme .url {
+      color: #c584fd;
+  }
   #sk_omnibar li.focused {
     background: #181d24 !important;
     color: #eef5fb !important;
