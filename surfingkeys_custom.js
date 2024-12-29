@@ -1,123 +1,505 @@
-// an example to create a new mapping `ctrl-y`
-api.mapkey('<ctrl-y>', 'Show me the money', function() {
-    Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
-});
+// A very tridactyl-esque config file.
 
-// an example to replace `T` with `gt`, click `Default mappings` to see how `T` works.
-api.map('gt', 'T');
+// Compatibility Prefix
+const {
+    Clipboard,
+    Front,
+    Hints,
+    Normal,
+    RUNTIME,
+    Visual,
+    aceVimMap,
+    addSearchAlias,
+    cmap,
+    getClickableElements,
+    imap,
+    imapkey,
+    iunmap,
+    map,
+    mapkey,
+    readText,
+    removeSearchAlias,
+    tabOpenLink,
+    unmap,
+    unmapAllExcept,
+    vmapkey,
+    vunmap
+} = api;
 
-// an example to remove mapkey `Ctrl-i`
-api.unmap('<ctrl-i>');
+// ---- Settings ----
+Hints.setCharacters('asdfgyuiopqwertnmzxcvb');
 
-//lurk mode
+settings.defaultSearchEngine = 'd';
+settings.hintAlign = 'left';
+settings.omnibarPosition = 'bottom';
+settings.focusFirstCandidate = false;
+settings.focusAfterClosed = 'last';
+settings.scrollStepSize = 200;
+settings.tabsThreshold = 0;
+settings.modeAfterYank = 'Normal';
 
-//settings.lurkingPattern = /https:\/\/(www\.)?(youtube\.com|gmail\.com|bilibili\.com)/i;
-//settings.lurkingPattern = /https:\/\/(www\.)?(gmail\.com)/i;
+// ---- Map -----
+// --- Hints ---
+// Open Multiple Links
+map('<Alt-f>', 'cf');
 
-api.cmap('<Ctrl-n>', '<Tab>');
-api.cmap('<Ctrl-p>', '<Shift-Tab>');
+// Yank Link URL
+map('<Alt-y>', 'ya');
+map('<Alt-u>', 'ya');
 
-api.imap(',,', "<Esc>");        // 按两次逗号退出当前输入框。
-api.imap(';;', "<Ctrl-'>");     // 按两次分号切换双引号。
+// Open Hint in new tab
+map('F', 'C');
 
-/////////////////////////////////////////////
-// mapkeys
-/////////////////////////////////////////////
-api.mapkey('<Space>', 'Choose a tab with omnibar', function() {
-    api.Front.openOmnibar({type: "Tabs"});
-});
+// --- Nav ---
+// Open Clipboard URL in current tab
+mapkey('p', "Open the clipboard's URL in the current tab", () => { Clipboard.read(function(response) { window.location.href = response.data; }); });
 
-api.mapkey("<Space>", "pause/resume on youtube", function() {
-    var btn = document.querySelector("button.ytp-ad-overlay-close-button") || document.querySelector("button.ytp-ad-skip-button") || document.querySelector('ytd-watch-flexy button.ytp-play-button');
-    btn.click();
-}, {domain: /youtube.com/i});
+// Open Clipboard URL in new tab
+map('P', 'cc');
 
-api.map("<ctrl-g>", '<Esc>');
-api.map('F', 'gf'); // open in new unactive tab
-api.mapkey('p', "Open the clipboard's URL in the current tab", function() {
-    navigator.clipboard.readText().then(
-        text => {
-            if (text.startsWith("http://") || text.startsWith("https://")) {
-                window.location = text;
-            } else {
-                window.location = text = "https://www.google.com/search?q=" + text;
-            }
-        }
-    );
-});
-api.mapkey('P', 'Open link from clipboard', function() {
-    navigator.clipboard.readText().then(
-        text => {
-            if (text.startsWith("http://") || text.startsWith("https://")) {
-                tabOpenLink(text);
-            } else {
-                tabOpenLink("https://www.google.com/search?q=" + text);
-            }
-        }
-    );
-});
+// Open a URL in current tab
+map('o', 'go');
 
-/////////////////////////////////////////////
-// searchalias
-/////////////////////////////////////////////
+// Choose a buffer/tab
+//map('b', 'T');
 
-api.addSearchAlias('d', 'duckduckgo', 'https://duckduckgo.com/?q=', 's', 'https://duckduckgo.com/ac/?q=', 'l', 'http://16.171.150.115:9090/bookmarks?q=', 'b', 'https://search.bilibili.com/all?keyword=', function(response) {
-    var res = JSON.parse(response.text);
-    return res.map(function(r){
-        return r.phrase;
-    });
-});
+// Edit current URL, and open in same tab
+map('O', ';U');
 
-///////////////////////////////////////////////
-//// set style
-///////////////////////////////////////////////
-//
-//api.Hints.style('border: solid 3px #552a48; color:#efe1eb; background: none; background-color: #552a48;');
-//api.Hints.style("div{border: solid 3px #707070; color:#efe1eb; background: none; background-color: #707070;} div.begin{color:red;}", "text");
-//
-//api.Visual.style('marks', 'background-color: #89a1e2;');
-//api.Visual.style('cursor', 'background-color: #9065b7;');
-//
-///////////////////////////////////////////////
-//// set theme
-///////////////////////////////////////////////
-//settings.theme = `
-//.sk_theme {
-//    font-family: Input Sans Condensed, Charcoal, sans-serif;
-//    font-size: 10pt;
-//    background: #24272e;
-//    color: #abb2bf;
-//}
-//.sk_theme tbody {
-//    color: #fff;
-//}
-//.sk_theme input {
-//    color: #d0d0d0;
-//}
-//.sk_theme .url {
-//    color: #61afef;
-//}
-//.sk_theme .annotation {
-//    color: #56b6c2;
-//}
-//.sk_theme .omnibar_highlight {
-//    color: #528bff;
-//}
-//.sk_theme .omnibar_timestamp {
-//    color: #e5c07b;
-//}
-//.sk_theme .omnibar_visitcount {
-//    color: #98c379;
-//}
-//.sk_theme #sk_omnibarSearchResult ul li:nth-child(odd) {
-//    background: #303030;
-//}
-//.sk_theme #sk_omnibarSearchResult ul li.focused {
-//    background: #3e4452;
-//}
-//#sk_status, #sk_find {
-//    font-size: 20pt;
-//}`;
-//// click `Save` button to make above settings to take effect.</ctrl-i></ctrl-y>
-//
-//
+// Edit current URL, and open in new tab
+//map('T', ';u');
+
+// History Back/Forward
+//map('H', 'S');
+//map('L', 'D');
+
+// Scroll Page Down/Up
+mapkey("<Ctrl-d>", "Scroll down", () => { Normal.scroll("pageDown"); });
+mapkey("<Ctrl-u>", "Scroll up", () => { Normal.scroll("pageUp"); });
+map('<Ctrl-b>', 'U');  // scroll full page up
+//map('<Ctrl-f>', 'P');  // scroll full page down -- looks like we can't overwrite browser-native binding
+
+// Next/Prev Page
+//map('K', '[[');
+//map('J', ']]');
+
+// Open Chrome Flags
+mapkey('gF', '#12Open Chrome Flags', () => { tabOpenLink("chrome://flags/"); });
+
+// --- Tabs ---
+// Tab Delete/Undo
+map('D', 'x');
+//mapkey('d', '#3Close current tab', () => { RUNTIME("closeTab"); });
+//mapkey('u', '#3Restore closed tab', () => { RUNTIME("openLast"); });
+
+// Move Tab Left/Right w/ one press
+map('>', '>>');
+map('<', '<<');
+
+// Tab Next/Prev
+map('<Alt-j>', 'R');
+map('<Alt-k>', 'E');
+
+// --- Misc ---
+// Yank URL w/ one press (disables other yx binds)
+//map('y', 'yy');
+
+// Change focused frame
+map('gf', 'w');
+
+// ---- Unmap -----
+// Proxy Stuff
+unmap('spa');
+unmap('spb');
+unmap('spc');
+unmap('spd');
+unmap('sps');
+unmap('cp');
+unmap(';cp');
+unmap(';ap');
+
+// Emoji
+iunmap(":");
+
+// Misc
+unmap(';t');
+unmap('si');
+unmap('ga');
+unmap('gc');
+unmap('gn');
+unmap('gr');
+unmap('ob');
+unmap('og');
+unmap('od');
+unmap('oy');
+
+// ---- Search Engines -----
+removeSearchAlias('b', 's');
+removeSearchAlias('d', 's');
+removeSearchAlias('g', 's');
+removeSearchAlias('h', 's');
+removeSearchAlias('w', 's');
+removeSearchAlias('y', 's');
+removeSearchAlias('s', 's');
+
+addSearchAlias('ama', 'amazon', 'https://www.amazon.com/s?k=', 's');
+addSearchAlias('ap', 'arch pkg', 'https://www.archlinux.org/packages/?sort=&q=', 's');
+addSearchAlias('aur', 'aur', 'https://aur.archlinux.org/packages/?O=0&SeB=nd&K=', 's');
+addSearchAlias('aw', 'arch wiki', 'https://wiki.archlinux.org/index.php?title=Special:Search&search=', 's');
+addSearchAlias('d',  'ddg', 'https://duckduckgo.com/?q=', 's');
+addSearchAlias('dh', 'docker', 'https://hub.docker.com/search?type=image&q=', 's');
+addSearchAlias('fh', 'flathub', 'https://flathub.org/apps/search/', 's');
+addSearchAlias('gh', 'github', 'https://github.com/search?q=', 's');
+addSearchAlias('pdb', 'proton', 'https://www.protondb.com/search?q=', 's');
+addSearchAlias('r', 'reddit', 'https://libreddit.spike.codes/r/', 's');
+addSearchAlias('st', 'steam', 'https://store.steampowered.com/search/?term=', 's');
+addSearchAlias('wiki', 'wikipedia', 'https://en.wikipedia.org/wiki/Special:Search/', 's');
+addSearchAlias('bl', 'bilibili', 'https://search.bilibili.com/all?keyword=', 's');
+addSearchAlias('y', 'yt', 'https://invidious.snopyta.org/search?q=', 's');/
+// ---- Hints ----
+// Hints have to be defined separately
+// Uncomment to enable
+
+// Tomorrow-Night
+/* -- DELETE LINE TO ENABLE THEME
+Hints.style('border: solid 2px #373B41; color:#52C196; background: initial; background-color: #1D1F21;');
+Hints.style("border: solid 2px #373B41 !important; padding: 1px !important; color: #C5C8C6 !important; background: #1D1F21 !important;", "text");
+Visual.style('marks', 'background-color: #52C19699;');
+Visual.style('cursor', 'background-color: #81A2BE;');
+-- DELETE LINE TO ENABLE THEME */
+
+// Nord
+/* -- DELETE LINE TO ENABLE THEME
+Hints.style('border: solid 2px #4C566A; color:#A3BE8C; background: initial; background-color: #3B4252;');
+Hints.style("border: solid 2px #4C566A !important; padding: 1px !important; color: #E5E9F0 !important; background: #3B4252 !important;", "text");
+Visual.style('marks', 'background-color: #A3BE8C99;');
+Visual.style('cursor', 'background-color: #88C0D0;');
+-- DELETE LINE TO ENABLE THEME */
+
+// Doom One
+Hints.style('border: solid 2px #282C34; color:#98be65; background: initial; background-color: #2E3440;');
+Hints.style("border: solid 2px #282C34 !important; padding: 1px !important; color: #51AFEF !important; background: #2E3440 !important;", "text");
+Visual.style('marks', 'background-color: #98be6599;');
+Visual.style('cursor', 'background-color: #51AFEF;');
+
+// Monokai
+/* -- DELETE LINE TO ENABLE THEME
+Hints.style('border: solid 2px #2D2E2E; color:#F92660; background: initial; background-color: #272822;');
+Hints.style("border: solid 2px #2D2E2E !important; padding: 1px !important; color: #A6E22E !important; background: #272822 !important;", "text");
+Visual.style('marks', 'background-color: #A6E22E99;');
+Visual.style('cursor', 'background-color: #F92660;');
+-- DELETE LINE TO ENABLE THEME */
+
+settings.theme = `
+/* Edit these variables for easy theme making */
+:root {
+  /* Font */
+  --font: 'Source Code Pro', Ubuntu, sans;
+  --font-size: 12;
+  --font-weight: bold;
+
+  /* -------------- */
+  /* --- THEMES --- */
+  /* -------------- */
+
+  /* -------------------- */
+  /* -- Tomorrow Night -- */
+  /* -------------------- */
+  /* -- DELETE LINE TO ENABLE THEME
+  --fg: #C5C8C6;
+  --bg: #282A2E;
+  --bg-dark: #1D1F21;
+  --border: #373b41;
+  --main-fg: #81A2BE;
+  --accent-fg: #52C196;
+  --info-fg: #AC7BBA;
+  --select: #585858;
+  -- DELETE LINE TO ENABLE THEME */
+
+  /* Unused Alternate Colors */
+  /* --cyan: #4CB3BC; */
+  /* --orange: #DE935F; */
+  /* --red: #CC6666; */
+  /* --yellow: #CBCA77; */
+
+  /* -------------------- */
+  /* --      NORD      -- */
+  /* -------------------- */
+  /* -- DELETE LINE TO ENABLE THEME
+  --fg: #E5E9F0;
+  --bg: #3B4252;
+  --bg-dark: #2E3440;
+  --border: #4C566A;
+  --main-fg: #88C0D0;
+  --accent-fg: #A3BE8C;
+  --info-fg: #5E81AC;
+  --select: #4C566A;
+  -- DELETE LINE TO ENABLE THEME */
+
+  /* Unused Alternate Colors */
+  /* --orange: #D08770; */
+  /* --red: #BF616A; */
+  /* --yellow: #EBCB8B; */
+
+  /* -------------------- */
+  /* --    DOOM ONE    -- */
+  /* -------------------- */
+  /* -- DELETE LINE TO ENABLE THEME
+  --fg: #51AFEF;
+  --bg: #2E3440;
+  --bg-dark: #21242B;
+  --border: #2257A0;
+  --main-fg: #51AFEF;
+  --accent-fg: #98be65;
+  --info-fg: #C678DD;
+  --select: #4C566A;
+  -- DELETE LINE TO ENABLE THEME */
+
+  /* Unused Alternate Colors */
+  /* --border-alt: #282C34; */
+  /* --cyan: #46D9FF; */
+  /* --orange: #DA8548; */
+  /* --red: #FF6C6B; */
+  /* --yellow: #ECBE7B; */
+
+  /* -------------------- */
+  /* --    MONOKAI    -- */
+  /* -------------------- */
+  /* -- DELETE LINE TO ENABLE THEME
+  --fg: #F8F8F2;
+  --bg: #272822;
+  --bg-dark: #1D1E19;
+  --border: #2D2E2E;
+  --main-fg: #F92660;
+  --accent-fg: #E6DB74;
+  --info-fg: #A6E22E;
+  --select: #556172;
+  -- DELETE LINE TO ENABLE THEME */
+
+  /* Unused Alternate Colors */
+  /* --red: #E74C3C; */
+  /* --orange: #FD971F; */
+  /* --blue: #268BD2; */
+  /* --violet: #9C91E4; */
+  /* --cyan: #66D9EF; */
+}
+
+/* ---------- Generic ---------- */
+.sk_theme {
+background: var(--bg);
+color: var(--fg);
+  background-color: var(--bg);
+  border-color: var(--border);
+  font-family: var(--font);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
+
+input {
+  font-family: var(--font);
+  font-weight: var(--font-weight);
+}
+
+.sk_theme tbody {
+  color: var(--fg);
+}
+
+.sk_theme input {
+  color: var(--fg);
+}
+
+/* Hints */
+#sk_hints .begin {
+  color: var(--accent-fg) !important;
+}
+
+#sk_tabs .sk_tab {
+  background: var(--bg-dark);
+  border: 1px solid var(--border);
+}
+
+#sk_tabs .sk_tab_title {
+  color: var(--fg);
+}
+
+#sk_tabs .sk_tab_url {
+  color: var(--main-fg);
+}
+
+#sk_tabs .sk_tab_hint {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--accent-fg);
+}
+
+.sk_theme #sk_frame {
+  background: var(--bg);
+  opacity: 0.2;
+  color: var(--accent-fg);
+}
+
+/* ---------- Omnibar ---------- */
+/* Uncomment this and use settings.omnibarPosition = 'bottom' for Pentadactyl/Tridactyl style bottom bar */
+/* .sk_theme#sk_omnibar {
+  width: 100%;
+  left: 0;
+} */
+
+.sk_theme .title {
+  color: var(--accent-fg);
+}
+
+.sk_theme .url {
+  color: var(--main-fg);
+}
+
+.sk_theme .annotation {
+  color: var(--accent-fg);
+}
+
+.sk_theme .omnibar_highlight {
+  color: var(--accent-fg);
+}
+
+.sk_theme .omnibar_timestamp {
+  color: var(--info-fg);
+}
+
+.sk_theme .omnibar_visitcount {
+  color: var(--accent-fg);
+}
+
+.sk_theme #sk_omnibarSearchResult ul li:nth-child(odd) {
+  background: var(--bg-dark);
+}
+
+.sk_theme #sk_omnibarSearchResult ul li.focused {
+  background: var(--border);
+}
+
+.sk_theme #sk_omnibarSearchArea {
+  border-top-color: var(--border);
+  border-bottom-color: var(--border);
+}
+
+.sk_theme #sk_omnibarSearchArea input,
+.sk_theme #sk_omnibarSearchArea span {
+  font-size: var(--font-size);
+}
+
+.sk_theme .separator {
+  color: var(--accent-fg);
+}
+
+/* ---------- Popup Notification Banner ---------- */
+#sk_banner {
+  font-family: var(--font);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  background: var(--bg);
+  border-color: var(--border);
+  color: var(--fg);
+  opacity: 0.9;
+}
+
+/* ---------- Popup Keys ---------- */
+#sk_keystroke {
+  background-color: var(--bg);
+}
+
+.sk_theme kbd .candidates {
+  color: var(--info-fg);
+}
+
+.sk_theme span.annotation {
+  color: var(--accent-fg);
+}
+
+/* ---------- Popup Translation Bubble ---------- */
+#sk_bubble {
+  background-color: var(--bg) !important;
+  color: var(--fg) !important;
+  border-color: var(--border) !important;
+}
+
+#sk_bubble * {
+  color: var(--fg) !important;
+}
+
+#sk_bubble div.sk_arrow div:nth-of-type(1) {
+  border-top-color: var(--border) !important;
+  border-bottom-color: var(--border) !important;
+}
+
+#sk_bubble div.sk_arrow div:nth-of-type(2) {
+  border-top-color: var(--bg) !important;
+  border-bottom-color: var(--bg) !important;
+}
+
+/* ---------- Search ---------- */
+#sk_status,
+#sk_find {
+  font-size: var(--font-size);
+  border-color: var(--border);
+}
+
+.sk_theme kbd {
+  background: var(--bg-dark);
+  border-color: var(--border);
+  box-shadow: none;
+  color: var(--fg);
+}
+
+.sk_theme .feature_name span {
+  color: var(--main-fg);
+}
+
+/* ---------- ACE Editor ---------- */
+#sk_editor {
+  background: var(--bg-dark) !important;
+  height: 50% !important;
+  /* Remove this to restore the default editor size */
+}
+
+.ace_dialog-bottom {
+  border-top: 1px solid var(--bg) !important;
+}
+
+.ace-chrome .ace_print-margin,
+.ace_gutter,
+.ace_gutter-cell,
+.ace_dialog {
+  background: var(--bg) !important;
+}
+
+.ace-chrome {
+  color: var(--fg) !important;
+}
+
+.ace_gutter,
+.ace_dialog {
+  color: var(--fg) !important;
+}
+
+.ace_cursor {
+  color: var(--fg) !important;
+}
+
+.normal-mode .ace_cursor {
+  background-color: var(--fg) !important;
+  border: var(--fg) !important;
+  opacity: 0.7 !important;
+}
+
+.ace_marker-layer .ace_selection {
+  background: var(--select) !important;
+}
+
+.ace_editor,
+.ace_dialog span,
+.ace_dialog input {
+  font-family: var(--font);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
+`;

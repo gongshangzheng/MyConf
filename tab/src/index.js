@@ -718,7 +718,7 @@ const commands = {
 
   // GitHub
   'gh': (args) => {
-    const url = 'https://github.com', search = '/';
+    const url = 'https://github.com', search = '/search?q=';
     if (args.length == 0) redirect(url)
     else redirect(url + search + args.join(''));
   },
