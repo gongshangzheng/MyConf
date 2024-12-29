@@ -65,6 +65,16 @@ maps.global = [
                  t+="?url="+encodeURIComponent(e)+"&auto_close",
                  window.open(t)}
   },
+  {alias:"gR",
+   map:"gR",
+   category:categories.bookmarks,
+   description:"create rss with ttrss",
+   callback:()=>{var e,t;
+                 e=window.location.href,
+                 t="http://87.106.191.101:181/public.php?op=bookmarklets--subscribe",
+                 t+="&&feed_url="+encodeURIComponent(e)+"&auto_close",
+                 window.open(t)}
+  },
   {
     alias: "zf",
     category: categories.mouseClick,
