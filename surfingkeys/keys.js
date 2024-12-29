@@ -55,6 +55,16 @@ maps.global = [
     category: categories.mouseClick,
     description: "Open a link in non-active new tab",
   },
+  {alias:"ab",
+   map:"ab",
+   category:categories.bookmarks,
+   description:"create bookmark with linkding",
+   callback:()=>{var e,t;
+                 e=window.location.href,
+                 t="http://16.171.150.115:9090/bookmarks/new",
+                 t+="?url="+encodeURIComponent(e)+"&auto_close",
+                 window.open(t)}
+  },
   {
     alias: "zf",
     category: categories.mouseClick,
