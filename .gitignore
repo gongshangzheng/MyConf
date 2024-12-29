@@ -1,3 +1,4 @@
 ibus/
 nvim/undodir/
 *.DS_Store
+./github-copilot/hosts.json
