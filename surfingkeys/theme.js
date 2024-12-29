@@ -168,6 +168,55 @@ div.sk_tab {
   #sk_keystroke kbd .candidates {
     color: #ff8cf8;
   }
+
+/* ---------- ACE Editor ---------- */
+#sk_editor {
+  background: var(--bg-dark) !important;
+  height: 50% !important;
+  /* Remove this to restore the default editor size */
+}
+
+.ace_dialog-bottom {
+  border-top: 1px solid var(--bg) !important;
+}
+
+.ace-chrome .ace_print-margin,
+.ace_gutter,
+.ace_gutter-cell,
+.ace_dialog {
+  background: var(--bg) !important;
+}
+
+.ace-chrome {
+  color: var(--fg) !important;
+}
+
+.ace_gutter,
+.ace_dialog {
+  color: var(--fg) !important;
+}
+
+.ace_cursor {
+  color: var(--fg) !important;
+}
+
+.normal-mode .ace_cursor {
+  background-color: var(--fg) !important;
+  border: var(--fg) !important;
+  opacity: 0.7 !important;
+}
+
+.ace_marker-layer .ace_selection {
+  background: var(--select) !important;
+}
+
+.ace_editor,
+.ace_dialog span,
+.ace_dialog input {
+  font-family: var(--font);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
 `;
 
 const isDarkMode = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
