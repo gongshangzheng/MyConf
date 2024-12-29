@@ -3,7 +3,7 @@ const commonStyles = `
 :root {
   /* Font */
   --font: 'Source Code Pro', Ubuntu, sans;
-  --font-size: 12;
+  --font-size: 10px;
   --font-weight: bold;
 
   /* -------------- */
@@ -227,6 +227,9 @@ div.sk_tab {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4e4d4c), color-stop(100%, #010409));
     box-shadow: 0px 3px 7px 0px rgb(175 175 59 / 30%);
     }
+  div.sk_tab_title{
+  color: #b481d9;
+  }
 .sk_theme .annotation {
     color: #9198a1;
 }
