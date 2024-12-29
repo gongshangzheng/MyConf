@@ -69,7 +69,7 @@ maps.global = [
     }
   },
   {
-    alias: "<Ctrl-r>",
+    alias: "<Ctrl-x>",
     category: categories.clipboard,
     description: "Copy text to Roam Research",
     callback: () => {
