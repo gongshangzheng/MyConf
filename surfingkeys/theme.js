@@ -126,6 +126,16 @@ const darkTheme = `
   .sk_theme .url {
       color: #c584fd;
   }
+  #sk_usage {
+    background: #272f3a;
+  }
+.sk_theme .annotation {
+    color: #9198a1;
+}
+.sk_theme kbd {
+    background: #b9b4c9;
+    color: #111;
+}
   #sk_omnibar li.focused {
     background: #181d24 !important;
     color: #eef5fb !important;
