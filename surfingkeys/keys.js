@@ -55,31 +55,67 @@ maps.global = [
     category: categories.mouseClick,
     description: "Open a link in non-active new tab",
   },
-  {alias:"ab",
-   map:"ab",
-   category:categories.bookmarks,
-   description:"create bookmark with linkding",
-   callback:()=>{var e,t;
-                 e=window.location.href,
-                 t="http://16.171.150.115:9090/bookmarks/new",
-                 t+="?url="+encodeURIComponent(e)+"&auto_close",
-                 window.open(t)}
-  },
-  {alias:"gR",
-   map:"gR",
-   category:categories.bookmarks,
-   description:"create rss with ttrss",
-   callback:()=>{var e,t;
-                 e=window.location.href,
-                 t="http://87.106.191.101:181/public.php?op=bookmarklets--subscribe",
-                 t+="&&feed_url="+encodeURIComponent(e)+"&auto_close",
-                 window.open(t)}
-  },
   {
     alias: "zf",
     category: categories.mouseClick,
     description: "Open link URL in vim editor",
     callback: actions.previewLink,
+  },
+  {
+    alias: "roam",
+    categories: categories.protocol,
+    description: "Open link URL in emacs org-roam",
+    callback: () => {
+    // 获取当前网页的 URL 和标题
+    var currentUrl = location.href;
+    var currentTitle = document.title;
+
+    // 获取用户选中的内容
+    function getSelectedContent() {
+        var html = "";
+        var sel = window.getSelection();
+
+      if (sel.rangeCount) {
+        var container = document.createElement("div");
+
+        // 将所有选中的内容复制到一个容器中
+        for (var i = 0, len = sel.rangeCount; i < len; i++) {
+          container.appendChild(sel.getRangeAt(i).cloneContents());
+        }
+
+        html = container.innerHTML;
+      }
+
+      // 创建一个容器来存储处理过的内容
+      var dataDom = document.createElement('div');
+      dataDom.innerHTML = html;
+
+      // 清理内容，确保段落和标题以换行符结尾
+      ['p', 'h1', 'h2', 'h3', 'h4'].forEach(function (tag) {
+        dataDom.querySelectorAll(tag).forEach(function (item) {
+          var content = item.innerHTML.trim();
+          if (content.length > 0) {
+            item.innerHTML = content + '\r\n';
+          }
+        });
+      });
+
+      // 返回处理后的纯文本内容
+      return dataDom.innerText.trim();
+    }
+
+      // 获取选中的内容
+      var selectedContent = getSelectedContent();
+
+      // 构造 Org Protocol URL
+      var orgProtocolUrl = 'org-protocol://roam-ref?template=r' +
+        '&ref=' + encodeURIComponent(currentUrl) +
+        '&title=' + encodeURIComponent(currentTitle) +
+        '&body=' + encodeURIComponent(selectedContent);
+
+      // 跳转到 Org Protocol URL
+      location.href = orgProtocolUrl;
+    }
   },
   {
     alias: "w",
