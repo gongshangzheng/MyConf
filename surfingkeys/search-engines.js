@@ -1157,6 +1157,7 @@ completions.tw.callback = (response, { query }) => {
   return results
 }
 
+
 // Reddit
 completions.re = {
   alias: "re",
@@ -1336,4 +1337,6 @@ completions.hf.callback = (response) => {
   ]
 }
 
+completions.ld={alias:"ld",name:"linkding",search:"http://16.171.150.115:9090/bookmarks?q="}
+completions.bl={alias:"bl",name:"bilibili",search:"https://search.bilibili.com/all?keyword="}
 export default completions
