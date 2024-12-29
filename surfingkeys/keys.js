@@ -63,6 +63,7 @@ maps.global = [
   },
   {
     alias: "roam",
+    map: "gr",
     categories: categories.protocol,
     description: "Open link URL in emacs org-roam",
     callback: () => {
