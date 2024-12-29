@@ -1374,33 +1374,4 @@ completions.bl = {
   search: "https://search.bilibili.com/all?keyword=",
   }
 
-completions.hf.callback = (response) => {
-  const res = JSON.parse(response.text)
-  // return [
-  return [
-    ...res.models.map(
-      (m) =>
-        suggestionItem({
-          url: `https://huggingface.co/${m.id}`,
-        })`
-        <div>
-          <div><strong>${m.id}</strong></div>
-          <div><span style="font-size: 0.9em; opacity: 70%">model</span></div>
-        </div>
-     `
-    ),
-    ...res.datasets.map(
-      (d) =>
-        suggestionItem({
-          url: `https://huggingface.co/datasets/${d.id}`,
-        })`
-        <div>
-          <div><strong>${d.id}</strong></div>
-          <div><span style="font-size: 0.9em; opacity: 70%">dataset</span></div>
-        </div>
-     `
-    ),
-  ]
-}
-
 export default completions

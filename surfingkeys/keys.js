@@ -56,6 +56,67 @@ maps.global = [
     description: "Open a link in non-active new tab",
   },
   {
+    alias: "cb",
+    map: "cb",
+    category: categories.bookmarks,
+    description: "Create bookmark in linkding",
+    callback: () => {
+      var bookmarkUrl = window.location.href;
+      var applicationUrl = 'http://16.171.150.115:9090/bookmarks/new';
+      applicationUrl += '?url=' + encodeURIComponent(bookmarkUrl);
+      applicationUrl += '&auto_close';
+      window.open(applicationUrl);
+    }
+  },
+  {
+    alias: "roam",
+    map: "or",
+    category: categories.misc,
+    description: "Copy text to Roam Research",
+    callback: () => {
+      // 获取当前页面的 URL 和标题
+      var url = location.href;
+      var title = document.title;
+
+      // 获取选中的文本内容并格式化为 HTML
+      function getSelectedText() {
+        var html = "";
+        var sel = window.getSelection();
+        if (sel.rangeCount) {
+          var container = document.createElement("div");
+          for (var i = 0, len = sel.rangeCount; i < len; i++) {
+            container.appendChild(sel.getRangeAt(i).cloneContents());
+          }
+          html = container.innerHTML;
+        }
+
+        // 处理选中的内容，将指定的标签内容追加换行符
+        var dataDom = document.createElement("div");
+        dataDom.innerHTML = html;
+        ['p', 'h1', 'h2', 'h3', 'h4'].forEach(function (tag) {
+          dataDom.querySelectorAll(tag).forEach(function (item) {
+            var content = item.innerHTML.trim();
+            if (content.length > 0) {
+              item.innerHTML = content + '&#13;&#10;';
+            }
+          });
+        });
+
+        return dataDom.innerText.trim();
+      }
+
+      // 编码 URL，标题和选中的文本内容
+      var body = getSelectedText();
+      var protocolUrl = 'org-protocol://roam-ref?template=r'
+          + '&ref=' + encodeURIComponent(url)
+          + '&title=' + encodeURIComponent(title)
+          + '&body=' + encodeURIComponent(body);
+
+      // 重定向到生成的 URL
+      location.href = protocolUrl;
+    }
+  },
+  {
     alias: "zf",
     category: categories.mouseClick,
     description: "Open link URL in vim editor",
