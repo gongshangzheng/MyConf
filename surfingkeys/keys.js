@@ -63,7 +63,7 @@ maps.global = [
   },
   {
     alias: "roam",
-    map: "gr",
+    map: "or",
     categories: categories.protocol,
     description: "Open link URL in emacs org-roam",
     callback: () => {
@@ -116,6 +116,18 @@ maps.global = [
 
       // 跳转到 Org Protocol URL
       location.href = orgProtocolUrl;
+    }
+  },
+  {
+    alias: "cb",
+    category: categories.bookmark,
+    description: "Bookmark current page in linkding",
+    callback: () => {
+      var bookmarkUrl = window.location.href; // 获取当前页面的 URL
+      var applicationUrl = 'http://16.171.150.115:9090/bookmarks/new'; // 目标 URL
+      applicationUrl += '?url=' + encodeURIComponent(bookmarkUrl); // 将当前 URL 编码并附加到请求 URL
+      applicationUrl += '&auto_close'; // 可以添加其他参数
+      window.open(applicationUrl); // 打开新窗口
     }
   },
   {
