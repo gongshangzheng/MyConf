@@ -105,7 +105,7 @@ config.bind("s", "scroll down", "normal")
 config.bind("w", "scroll up", "normal")
 config.bind("x", "tab-close", "normal")
 config.bind("X", "undo", "normal")
-config.bind("<Alt-x>", "cmd-edit", "normal")
+config.bind("<Alt-x>", "cmd-set-text :", "normal")
 
 # }}}
 # === open new link in new tab === {{{
@@ -129,6 +129,7 @@ config.bind('go', 'cmd-set-text -s :open', mode='normal')
 config.bind('gO', 'cmd-set-text -s :open -t', mode='normal')
 config.bind('ot', 'cmd-set-text -s :open -t', mode='normal')
 config.bind(';u', 'cmd-set-text :open {url:pretty}')
+config.bind('ou', 'cmd-set-text :open {url:pretty}')
 # }}}
 # ===================== quickmark functions ======================= {{{
 config.bind("\\f", "spawn firefox {url}")
