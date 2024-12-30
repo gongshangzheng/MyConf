@@ -56,6 +56,12 @@ maps.global = [
     description: "Open a link in non-active new tab",
   },
   {
+    alias: "oo",
+    map: "go",
+    category: categories.omnibar,
+    description: "URL in current tab",
+  },
+  {
     alias: "cb",
     //map: "cb",
     category: categories.bookmarks,
