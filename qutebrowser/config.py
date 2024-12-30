@@ -136,7 +136,7 @@ config.bind("\\m", "quickmark-load mainonly")
 config.bind("\\t", "quickmark-load translate")
 config.bind("gz", "zotero")
 config.bind("gs", "doi")
-config.bind("<Ctrl+r>", "quickmark-load roam")
+config.bind("<Ctrl+x>", "quickmark-load roam")
 config.bind("cb", "open -t http://16.171.150.115:9090/bookmarks/new?url={url}")
 config.bind("gr", "open -t http://87.106.191.101:181/public.php?op=bookmarklets--subscribe&&feed_url={url}")
 
