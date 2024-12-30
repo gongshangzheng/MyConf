@@ -62,6 +62,12 @@ maps.global = [
     description: "URL in current tab",
   },
   {
+    alias: "u",
+    map: "X",
+    description: "restore closed tab",
+    category: categories.tabs,
+  },
+  {
     alias: "cb",
     //map: "cb",
     category: categories.bookmarks,
