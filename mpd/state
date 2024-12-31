@@ -1,7 +1,7 @@
 sw_volume: 100
 audio_device_state:1:My ALSA Device
 state: play
-current: 190
+current: 142
 time: 120.092000
 random: 1
 repeat: 0
@@ -11,196 +11,380 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:*namirin - 「only my railgun」歌ってみた【＊なみりん】.m4a
-1:2nd South Carolina String Band - Oh! Susanna.m4a
-2:a-ha - Take on Me.m4a
-3:Alan Walker - Alone.m4a
-4:Alisa - 溯Reverse (治愈版).m4a
-5:Alvaro Soler - Sofia [blank].m4a
-6:Amayadori - 猫かぶり.m4a
-7:assan1030kazim1050 - Sexion D'aussaut Samedi Soir.m4a
-8:ASU - ソラゴト.m4a
-9:AVROTROS Klassiek - Rachmaninoff: Piano Concerto no.2 op.18 - Anna Fedorova - Complete Live Concert - HD.m4a
-10:Baltimore Symphony Orchestra、David Zinman、Richard Leech、Sylvia McNair、Choir of St. David's Episcopal Church、Choir of St. Michael and All Angels、Baltimore Symphony Orchestra Chorus和Hector Berlioz - La Marseillaise, H 51.m4a
-11:Bg Studios - Facts Of Life.m4a
-12:Bizarrap and Shakira - Shakira: Bzrp Music Sessions, Vol. 53.m4a
-13:Black Myth: Wukong - ‘戒网’ - Black Myth: Wukong OST.m4a
-14:Bôa - Duvet.m4a
-15:Bob Marley - No Woman No Cry.m4a
-16:Carly Rae Jepsen - Call Me Maybe.m4a
-17:Cécile Corbel - Jardin secret.m4a
-18:Cécile Corbel - Le Roi S'en Va Chasser.m4a
-19:Chansons, Folklore et Variété - Jacques Helian - En chantant hey di ho.m4a
-20:Chiyomi Anchovy 安丘比 - Слуга Народа—人民公僕（烏克蘭同名電視劇中的瓦夏競選曲）.m4a
-21:Chuck Berry - You Never Can Tell.m4a
-22:Classical Music Only - J.S. Bach - Minuet and Badinerie from Orchestral Suite No. 2 in B.m4a
-23:Coldplay - The Scientist.m4a
-24:Daishi Dance - Take Me Hand（合作音乐人：Cecile Corbel）.m4a
-25:Earth, Wind & Fire - Boogie Wonderland.m4a
-26:Earth, Wind & Fire - December (Based on "September").m4a
-27:Ella Fitzgerald and Count Basie - Tea For Two.m4a
-28:Etnuncreges - Suite n°1 - Prélude - J.S. Bach - Violoncello da Spalla.m4a
-29:FAA_Music - Слуга Народа | Потап и Настя - Слуга Народа.m4a
-30:FIFTY FIFTY - Cupid (Twin Version).m4a
-31:Frank Peter Zimmermann, English Chamber Orchestra, Jeffrey Tate and Ludwig van Beethoven - Romance for Violin and Orchestra No. 2 in F Major, Op. 50.m4a
-32:G.E.M. 鄧紫棋 - 來自天堂的魔鬼.m4a
-33:Gagtiger - Chantons Sous La Pluie - Singin In The Rain (Scène Mythique).m4a
-34:Gambino - Copacabana.m4a
-35:Glenn Gould and Johann Sebastian Bach - The Art of the Fugue, BWV 1080: Contrapunctus I.m4a
-36:Goose house - オトノナルホウヘ→ - Oto No Naru Houe.m4a
-37:Goose house - 光るなら - Hikarunara.m4a
-38:Hans Zimmer and Richard Harvey - Preparation.m4a
-39:he's... kinda cute.m4a
-40:Hector A. Camarillo - Eagles - Hotel California (Lossless Audio).m4a
-41:Hello, Happy World! - ノーポイッ！ (Cover).m4a
-42:Houkago Teatime - Utauyo!!MIRACLE.m4a
-43:Houkago Teatime - ときめきシュガー.m4a
-44:Houkago Teatime - 天使にふれたよ!.m4a
-45:Iron Frill - FANTASTIC LOVERS.m4a
-46:Izzamuzzic and Julien Marchal - Shootout.m4a
-47:Jerome Patrick Hoban - Jack Rabbit Slims Twist Contest.m4a
-48:Joe Hisaishi - Merry-Go-Round of Life (from 'Howl's Moving Castle').m4a
-49:Johann Sebastian Bach - Concerto for Two Violins in D Minor, BWV 1043: I. Vivace.m4a
-50:John Travolta and Samuel L. Jackson - Personality Goes A Long Way.m4a
-51:Kain Sound - Jar Of Love (爱的罐子) - 曲婉婷 (Wanting Qu) (Kain Music) ♪ | 一听就上头的BGM | 年最劲爆的抖音歌曲 | 最强抖音BGM | 抖音 | TikTok.m4a
-52:Keala Settle and The Greatest Showman Ensemble - This Is Me.m4a
-53:Kool & The Gang - Celebration.m4a
-54:Kool & The Gang - Fresh.m4a
-55:Kool & The Gang - Jungle Boogie.m4a
-56:Kygo and Oh Wonder - How Would I Know.m4a
-57:LBI利比 - 小城夏天.m4a
-58:London Music Works - Theme (From "The Facts of Life").m4a
-59:Lucienne Delyle - Mon amant de Saint-Jean.m4a
-60:Ludovico Einaudi - Fly.m4a
-61:Ludovico Einaudi - Una Mattina.m4a
-62:Ludovico Einaudi, Daniel Hope and I Virtuosi Italiani - Experience.m4a
-63:MACK - Ludovico Einaudi - Una Mattina (Extended Remix).m4a
-64:madelline - dopamine.m4a
-65:majiko - アイロニ - Irony.m4a
-66:majiko - 命に嫌われている。 - Inochini Kirawareteiru.m4a
-67:MARINA - To Be Human.m4a
-68:Mickaël Miro - L'horloge tourne.m4a
-69:Mikann耙耙柑 - 醒 (完整版).m4a
-70:MYTH & ROID - Endless Embrace.m4a
-71:Naps - La kiffance.m4a
-72:Oh Wonder - All We Do (Official Audio).m4a
-73:Oh Wonder - Drive.m4a
-74:Oh Wonder - I Wish I Never Met You.m4a
-75:Oh Wonder - Landslide.m4a
-76:Oh Wonder - Lose It.m4a
-77:Oh Wonder - Midnight Moon.m4a
-78:Oh Wonder - Technicolour Beat.m4a
-79:Oh Wonder - The Rain.m4a
-80:Oh Wonder - White Blood.m4a
-81:One Direction - What Makes You Beautiful.m4a
-82:Passenger - Let Her Go.m4a
-83:PianoForest - 溯Reverse(钢琴版).m4a
-84:Pierre Bachelet - Les corons (Lyrics video).m4a
-85:Pitbull and Kesha - Timber.m4a
-86:Poppy - Moshi Moshi.m4a
-87:Sabrina Carpenter - Nonsense.m4a
-88:Seraphine, Jasmine Clarke and Absofacto - Childhood Dreams.m4a
-89:Serrini - 放棄治療.m4a
-90:Shakira - Acróstico (Milan + Sasha).m4a
-91:Shakira - Hips Don't Lie（合作音乐人：Wyclef Jean）.m4a
-92:Shakira - Whenever, Wherever.m4a
-93:Sigrid - Strangers.m4a
-94:Simon & Garfunkel - The Sounds of Silence (Audio).m4a
-95:Taylor Swift - ...Ready For It?.m4a
-96:Taylor Swift - 22.m4a
-97:Taylor Swift - Blank Space.m4a
-98:Taylor Swift - Daylight.m4a
-99:Taylor Swift - Don’t Blame Me.m4a
-100:Taylor Swift - Enchanted.m4a
-101:Taylor Swift - End Game（合作音乐人：Ed Sheeran和Future）.m4a
-102:Taylor Swift - Gorgeous.m4a
-103:Taylor Swift - Is It Over Now? (Taylor's Version) (From The Vault).m4a
-104:Taylor Swift - Look What You Made Me Do.m4a
-105:Taylor Swift - Love Story.m4a
-106:Taylor Swift - Lover.m4a
-107:Taylor Swift - Mine (Taylor's Version).m4a
-108:Taylor Swift - Red.m4a
-109:Taylor Swift - Shake It Off.m4a
-110:Taylor Swift - Style.m4a
-111:Taylor Swift - Welcome To New York.m4a
-112:The Verve - Bitter Sweet Symphony.m4a
-113:The Weeknd - I Feel It Coming ft. Daft Punk (Official Video)（合作音乐人：Daft Punk）.m4a
-114:TikTok Music Cloud - All My People - Alexandra Stan ♪ | 抖音好听洗脑的BGM | 抖音熱門 | 抖音 | TikTok.m4a
-115:Train - Meet Virginia.m4a
-116:VC二次元मLY - 【洛天依原创】我的悲伤是水做的 【Luo Tianyi Original】Bad Bad Water.m4a
-117:w. zzang - 大乔小乔《农夫渔夫》.m4a
-118:W&W and 舞动精灵乐队 - God Is a Girl (Mixed).m4a
-119:Zaz - La vie en rose.m4a
-120:ZheLai - 三界 四洲 无所求 不可救 《黑神话：悟空》章节片尾曲《屁》今日上线Black Myth: Wukong.m4a
-121:μ's - Snow halation.m4a
-122:μ's - SUNNY DAY SONG.m4a
-123:μ's - タカラモノズ.m4a
-124:μ's - ユメノトビラ.m4a
-125:μ's - 愛してるばんざーい!.m4a
-126:グリーンフェイス - DEAD or RAP！！！.m4a
-127:五月天 - 戀愛ing.m4a
-128:五月天 - 洋蔥.m4a
-129:五月天 - 知足.m4a
-130:五月天 (Mayday) - 乾杯.m4a
-131:五月天 (Mayday) - 突然好想你.m4a
-132:卡丝卡达乐团 - Bad Boy.m4a
-133:卡丝卡达乐团 - Everytime We Touch - Radio Edit.m4a
-134:呦猫UNEKO - 梦回还.m4a
-135:周子琰 - 无论你多怪异我还是会喜欢你 (《刺客伍六七》动画推广版片尾曲).m4a
-136:周杰倫 - 七里香.m4a
-137:周杰倫 - 牛仔很忙.m4a
-138:周杰倫 - 花海.m4a
-139:嘿嘿 - empty love - 抖音（by Lulleaux）.m4a
-140:大主宰乐团和大主宰樂團 - 剪刀刺客 (动画《刺客伍六七》主题曲).m4a
-141:大卫·库塔 - Dangerous（合作音乐人：Sam Martin）.m4a
-142:孔一蝉 - 爱YOU READY , 爱我READY.m4a
-143:弗雷德里克·肖邦 - Chopin - Etude Op. 10 No. 1 (Waterfall).m4a
-144:徐良 - 坏女孩（合作音乐人：小凌）.m4a
-145:排骨教主 - 牵丝戏.m4a
-146:无情的蓝色 - 犬夜叉剧场版《穿越时空的思念》主题曲 穿越时空的思念.m4a
-147:曲婉婷 - Jar Of Love.m4a
-148:朴树 - 生如夏花.m4a
-149:李荣浩 - 不将就 (电影"何以笙箫默"片尾曲).m4a
-150:李荣浩 - 对等关系（合作音乐人：张惠妹）.m4a
-151:李荣浩 - 戒烟.m4a
-152:李荣浩 - 耳朵.m4a
-153:汉斯·季默 and 卡米尔 - Suis-moi (Reprise).m4a
-154:汉斯·季默 and 卡米尔 - Suis-moi.m4a
-155:泽野弘之和Laco - Zero Eclipse.m4a
-156:洛天依 and 乐正绫 - 九九八十一.m4a
-157:洛天依 and 言和 - 普通Disco.m4a
-158:洛天依, 言和 and 乐正绫 - 四重罪孽.m4a
-159:王朝1982 - 成仙.m4a
-160:珂拉琪 Collage - 葬予規路火烌猶在.m4a
-161:田馥甄 - 還是要幸福(Still in happiness).m4a
-162:田馥甄 - 魔鬼中的天使(Angel devil).m4a
-163:艾丝黛儿 - American Boy（合作音乐人：坎耶·韦斯特）.m4a
-164:草東沒有派對 - 大風吹.m4a
-165:薛之謙 - 動物世界.m4a
-166:薛之謙 - 方圓幾里.m4a
-167:薛之謙 - 陪你去流浪.m4a
-168:虹ヶ咲学園スクールアイドル同好会 - NEO SKY, NEO MAP!.m4a
-169:血肉果汁機 - 打開太陽.m4a
-170:謝春花 - 只道尋常.m4a
-171:许巍 - 曾经的你.m4a
-172:达斯蒂·斯普林菲尔德 - Son of a Preacher Man.m4a
-173:邓丽君 - 又见炊烟.m4a
-174:邓丽君 - 我只在乎你.m4a
-175:郑秀文 - 萨拉热窝的罗密欧与茱丽叶.m4a
-176:郭顶 - 凄美地.m4a
-177:酷玩乐队 - Sparks.m4a
-178:酷玩乐队 - Viva la Vida.m4a
-179:阿哈 - Take On Me.m4a
-180:阿尔·格林 - Let's Stay Together.m4a
-181:陈奕迅 - 好久不见.m4a
-182:陈慧娴 - 千千阕歌.m4a
-183:陳奕迅 - K歌之王 (國).m4a
-184:陳粒 - 大梦.m4a
-185:雷雨心 - 记·念.m4a
-186:音速行星 - 天际线.m4a
-187:马玉兰 - 【大雄×静香】送你一颗流星⭐════.m4a
-188:黄龄 - 免我蹉跎苦.m4a
-189:齊豫 - 船歌.m4a
-190:【夢幻音樂 | 小提琴】低吟山嶺《60min》【放鬆/專注/作業BGM】.m4a
-191:Manu Pilas - Bella Ciao (Música Original de la Serie la Casa de Papel/ Money Heist).m4a
+0:Etnuncreges - Suite n°1 - Prélude - J.S. Bach - Violoncello da Spalla.m4a
+1:Keala Settle and The Greatest Showman Ensemble - This Is Me.m4a
+2:Houkago Teatime - ときめきシュガー.m4a
+3:五月天 (Mayday) - 突然好想你.m4a
+4:μ's - Snow halation.m4a
+5:Kain Sound - Jar Of Love (爱的罐子) - 曲婉婷 (Wanting Qu) (Kain Music) ♪ | 一听就上头的BGM | 年最劲爆的抖音歌曲 | 最强抖音BGM | 抖音 | TikTok.m4a
+6:卡丝卡达乐团 - Everytime We Touch - Radio Edit.m4a
+7:Goose house - オトノナルホウヘ→ - Oto No Naru Houe.m4a
+8:Glenn Gould and Johann Sebastian Bach - The Art of the Fugue, BWV 1080: Contrapunctus I.m4a
+9:Oh Wonder - Lose It.m4a
+10:G.E.M. 鄧紫棋 - 來自天堂的魔鬼.m4a
+11:Taylor Swift - Shake It Off.m4a
+12:Poppy - Moshi Moshi.m4a
+13:陈慧娴 - 千千阕歌.m4a
+14:朴树 - 生如夏花.m4a
+15:Gambino - Copacabana.m4a
+16:Naps - La kiffance.m4a
+17:majiko - 命に嫌われている。 - Inochini Kirawareteiru.m4a
+18:Earth, Wind & Fire - Boogie Wonderland.m4a
+19:Bg Studios - Facts Of Life.m4a
+20:Amayadori - 猫かぶり.m4a
+21:马玉兰 - 【大雄×静香】送你一颗流星⭐════.m4a
+22:Alvaro Soler - Sofia [blank].m4a
+23:Chansons, Folklore et Variété - Jacques Helian - En chantant hey di ho.m4a
+24:Taylor Swift - Don’t Blame Me.m4a
+25:Ludovico Einaudi - Fly.m4a
+26:W&W and 舞动精灵乐队 - God Is a Girl (Mixed).m4a
+27:薛之謙 - 動物世界.m4a
+28:嘿嘿 - empty love - 抖音（by Lulleaux）.m4a
+29:郭顶 - 凄美地.m4a
+30:Frank Peter Zimmermann, English Chamber Orchestra, Jeffrey Tate and Ludwig van Beethoven - Romance for Violin and Orchestra No. 2 in F Major, Op. 50.m4a
+31:Bizarrap and Shakira - Shakira: Bzrp Music Sessions, Vol. 53.m4a
+32:Taylor Swift - Love Story.m4a
+33:孔一蝉 - 爱YOU READY , 爱我READY.m4a
+34:Taylor Swift - Gorgeous.m4a
+35:Kygo and Oh Wonder - How Would I Know.m4a
+36:曲婉婷 - Jar Of Love.m4a
+37:Hello, Happy World! - ノーポイッ！ (Cover).m4a
+38:Cécile Corbel - Jardin secret.m4a
+39:Train - Meet Virginia.m4a
+40:Taylor Swift - Welcome To New York.m4a
+41:李荣浩 - 戒烟.m4a
+42:Ludovico Einaudi, Daniel Hope and I Virtuosi Italiani - Experience.m4a
+43:五月天 - 戀愛ing.m4a
+44:Pitbull and Kesha - Timber.m4a
+45:Houkago Teatime - 天使にふれたよ!.m4a
+46:邓丽君 - 又见炊烟.m4a
+47:Classical Music Only - J.S. Bach - Minuet and Badinerie from Orchestral Suite No. 2 in B.m4a
+48:齊豫 - 船歌.m4a
+49:酷玩乐队 - Sparks.m4a
+50:madelline - dopamine.m4a
+51:Taylor Swift - ...Ready For It?.m4a
+52:五月天 (Mayday) - 乾杯.m4a
+53:Taylor Swift - Enchanted.m4a
+54:Sigrid - Strangers.m4a
+55:Mickaël Miro - L'horloge tourne.m4a
+56:The Weeknd - I Feel It Coming ft. Daft Punk (Official Video)（合作音乐人：Daft Punk）.m4a
+57:ZheLai - 三界 四洲 无所求 不可救 《黑神话：悟空》章节片尾曲《屁》今日上线Black Myth: Wukong.m4a
+58:ASU - ソラゴト.m4a
+59:Johann Sebastian Bach - Concerto for Two Violins in D Minor, BWV 1043: I. Vivace.m4a
+60:Simon & Garfunkel - The Sounds of Silence (Audio).m4a
+61:阿哈 - Take On Me.m4a
+62:Taylor Swift - ...Ready For It?.m4a
+63:Hector A. Camarillo - Eagles - Hotel California (Lossless Audio).m4a
+64:One Direction - What Makes You Beautiful.m4a
+65:a-ha - Take on Me.m4a
+66:五月天 (Mayday) - 突然好想你.m4a
+67:Earth, Wind & Fire - December (Based on "September").m4a
+68:Taylor Swift - Is It Over Now? (Taylor's Version) (From The Vault).m4a
+69:Kain Sound - Jar Of Love (爱的罐子) - 曲婉婷 (Wanting Qu) (Kain Music) ♪ | 一听就上头的BGM | 年最劲爆的抖音歌曲 | 最强抖音BGM | 抖音 | TikTok.m4a
+70:Black Myth: Wukong - ‘戒网’ - Black Myth: Wukong OST.m4a
+71:洛天依, 言和 and 乐正绫 - 四重罪孽.m4a
+72:薛之謙 - 陪你去流浪.m4a
+73:Poppy - Moshi Moshi.m4a
+74:周杰倫 - 七里香.m4a
+75:洛天依 and 言和 - 普通Disco.m4a
+76:呦猫UNEKO - 梦回还.m4a
+77:酷玩乐队 - Viva la Vida.m4a
+78:Zaz - La vie en rose.m4a
+79:Hans Zimmer and Richard Harvey - Preparation.m4a
+80:Kygo and Oh Wonder - How Would I Know.m4a
+81:薛之謙 - 方圓幾里.m4a
+82:Taylor Swift - Welcome To New York.m4a
+83:Ludovico Einaudi - Una Mattina.m4a
+84:艾丝黛儿 - American Boy（合作音乐人：坎耶·韦斯特）.m4a
+85:Houkago Teatime - Utauyo!!MIRACLE.m4a
+86:Goose house - 光るなら - Hikarunara.m4a
+87:Alan Walker - Alone.m4a
+88:Chuck Berry - You Never Can Tell.m4a
+89:Taylor Swift - Look What You Made Me Do.m4a
+90:五月天 (Mayday) - 乾杯.m4a
+91:Kool & The Gang - Celebration.m4a
+92:达斯蒂·斯普林菲尔德 - Son of a Preacher Man.m4a
+93:王朝1982 - 成仙.m4a
+94:排骨教主 - 牵丝戏.m4a
+95:Gagtiger - Chantons Sous La Pluie - Singin In The Rain (Scène Mythique).m4a
+96:Chiyomi Anchovy 安丘比 - Слуга Народа—人民公僕（烏克蘭同名電視劇中的瓦夏競選曲）.m4a
+97:Hans Zimmer and Richard Harvey - Preparation.m4a
+98:Coldplay - The Scientist.m4a
+99:w. zzang - 大乔小乔《农夫渔夫》.m4a
+100:Lucienne Delyle - Mon amant de Saint-Jean.m4a
+101:he's... kinda cute.m4a
+102:Goose house - オトノナルホウヘ→ - Oto No Naru Houe.m4a
+103:陈奕迅 - 好久不见.m4a
+104:郑秀文 - 萨拉热窝的罗密欧与茱丽叶.m4a
+105:The Verve - Bitter Sweet Symphony.m4a
+106:MYTH & ROID - Endless Embrace.m4a
+107:李荣浩 - 戒烟.m4a
+108:Oh Wonder - All We Do (Official Audio).m4a
+109:Kool & The Gang - Celebration.m4a
+110:Earth, Wind & Fire - Boogie Wonderland.m4a
+111:李荣浩 - 对等关系（合作音乐人：张惠妹）.m4a
+112:Pierre Bachelet - Les corons (Lyrics video).m4a
+113:Bob Marley - No Woman No Cry.m4a
+114:Mikann耙耙柑 - 醒 (完整版).m4a
+115:Sabrina Carpenter - Nonsense.m4a
+116:グリーンフェイス - DEAD or RAP！！！.m4a
+117:李荣浩 - 耳朵.m4a
+118:μ's - 愛してるばんざーい!.m4a
+119:Taylor Swift - Is It Over Now? (Taylor's Version) (From The Vault).m4a
+120:阿尔·格林 - Let's Stay Together.m4a
+121:Oh Wonder - Landslide.m4a
+122:Kool & The Gang - Jungle Boogie.m4a
+123:Cécile Corbel - Jardin secret.m4a
+124:Taylor Swift - Gorgeous.m4a
+125:μ's - SUNNY DAY SONG.m4a
+126:The Weeknd - I Feel It Coming ft. Daft Punk (Official Video)（合作音乐人：Daft Punk）.m4a
+127:Taylor Swift - Shake It Off.m4a
+128:he's... kinda cute.m4a
+129:邓丽君 - 我只在乎你.m4a
+130:Jerome Patrick Hoban - Jack Rabbit Slims Twist Contest.m4a
+131:薛之謙 - 動物世界.m4a
+132:Keala Settle and The Greatest Showman Ensemble - This Is Me.m4a
+133:五月天 - 洋蔥.m4a
+134:Oh Wonder - Lose It.m4a
+135:Sabrina Carpenter - Nonsense.m4a
+136:Taylor Swift - Blank Space.m4a
+137:ZheLai - 三界 四洲 无所求 不可救 《黑神话：悟空》章节片尾曲《屁》今日上线Black Myth: Wukong.m4a
+138:Daishi Dance - Take Me Hand（合作音乐人：Cecile Corbel）.m4a
+139:Chiyomi Anchovy 安丘比 - Слуга Народа—人民公僕（烏克蘭同名電視劇中的瓦夏競選曲）.m4a
+140:洛天依 and 乐正绫 - 九九八十一.m4a
+141:Oh Wonder - White Blood.m4a
+142:五月天 - 戀愛ing.m4a
+143:周杰倫 - 牛仔很忙.m4a
+144:陳奕迅 - K歌之王 (國).m4a
+145:Oh Wonder - The Rain.m4a
+146:李荣浩 - 耳朵.m4a
+147:田馥甄 - 還是要幸福(Still in happiness).m4a
+148:汉斯·季默 and 卡米尔 - Suis-moi (Reprise).m4a
+149:弗雷德里克·肖邦 - Chopin - Etude Op. 10 No. 1 (Waterfall).m4a
+150:Joe Hisaishi - Merry-Go-Round of Life (from 'Howl's Moving Castle').m4a
+151:洛天依 and 言和 - 普通Disco.m4a
+152:LBI利比 - 小城夏天.m4a
+153:μ's - Snow halation.m4a
+154:田馥甄 - 魔鬼中的天使(Angel devil).m4a
+155:謝春花 - 只道尋常.m4a
+156:阿哈 - Take On Me.m4a
+157:Train - Meet Virginia.m4a
+158:血肉果汁機 - 打開太陽.m4a
+159:Carly Rae Jepsen - Call Me Maybe.m4a
+160:One Direction - What Makes You Beautiful.m4a
+161:Shakira - Hips Don't Lie（合作音乐人：Wyclef Jean）.m4a
+162:Ludovico Einaudi, Daniel Hope and I Virtuosi Italiani - Experience.m4a
+163:Hello, Happy World! - ノーポイッ！ (Cover).m4a
+164:AVROTROS Klassiek - Rachmaninoff: Piano Concerto no.2 op.18 - Anna Fedorova - Complete Live Concert - HD.m4a
+165:μ's - ユメノトビラ.m4a
+166:The Verve - Bitter Sweet Symphony.m4a
+167:嘿嘿 - empty love - 抖音（by Lulleaux）.m4a
+168:排骨教主 - 牵丝戏.m4a
+169:雷雨心 - 记·念.m4a
+170:Zaz - La vie en rose.m4a
+171:μ's - ユメノトビラ.m4a
+172:2nd South Carolina String Band - Oh! Susanna.m4a
+173:Bôa - Duvet.m4a
+174:泽野弘之和Laco - Zero Eclipse.m4a
+175:Passenger - Let Her Go.m4a
+176:血肉果汁機 - 打開太陽.m4a
+177:Chuck Berry - You Never Can Tell.m4a
+178:Oh Wonder - Landslide.m4a
+179:Etnuncreges - Suite n°1 - Prélude - J.S. Bach - Violoncello da Spalla.m4a
+180:音速行星 - 天际线.m4a
+181:薛之謙 - 陪你去流浪.m4a
+182:田馥甄 - 魔鬼中的天使(Angel devil).m4a
+183:謝春花 - 只道尋常.m4a
+184:卡丝卡达乐团 - Bad Boy.m4a
+185:Johann Sebastian Bach - Concerto for Two Violins in D Minor, BWV 1043: I. Vivace.m4a
+186:Ludovico Einaudi - Una Mattina.m4a
+187:周子琰 - 无论你多怪异我还是会喜欢你 (《刺客伍六七》动画推广版片尾曲).m4a
+188:Seraphine, Jasmine Clarke and Absofacto - Childhood Dreams.m4a
+189:周杰倫 - 花海.m4a
+190:μ's - タカラモノズ.m4a
+191:黄龄 - 免我蹉跎苦.m4a
+192:majiko - アイロニ - Irony.m4a
+193:Izzamuzzic and Julien Marchal - Shootout.m4a
+194:Oh Wonder - Technicolour Beat.m4a
+195:MACK - Ludovico Einaudi - Una Mattina (Extended Remix).m4a
+196:Oh Wonder - Midnight Moon.m4a
+197:齊豫 - 船歌.m4a
+198:Bôa - Duvet.m4a
+199:μ's - タカラモノズ.m4a
+200:汉斯·季默 and 卡米尔 - Suis-moi.m4a
+201:草東沒有派對 - 大風吹.m4a
+202:Gagtiger - Chantons Sous La Pluie - Singin In The Rain (Scène Mythique).m4a
+203:【夢幻音樂 | 小提琴】低吟山嶺《60min》【放鬆/專注/作業BGM】.m4a
+204:μ's - 愛してるばんざーい!.m4a
+205:Alan Walker - Alone.m4a
+206:泽野弘之和Laco - Zero Eclipse.m4a
+207:音速行星 - 天际线.m4a
+208:Taylor Swift - Enchanted.m4a
+209:Kool & The Gang - Fresh.m4a
+210:Bg Studios - Facts Of Life.m4a
+211:汉斯·季默 and 卡米尔 - Suis-moi.m4a
+212:Izzamuzzic and Julien Marchal - Shootout.m4a
+213:Ella Fitzgerald and Count Basie - Tea For Two.m4a
+214:酷玩乐队 - Sparks.m4a
+215:Taylor Swift - 22.m4a
+216:Taylor Swift - Daylight.m4a
+217:马玉兰 - 【大雄×静香】送你一颗流星⭐════.m4a
+218:无情的蓝色 - 犬夜叉剧场版《穿越时空的思念》主题曲 穿越时空的思念.m4a
+219:PianoForest - 溯Reverse(钢琴版).m4a
+220:徐良 - 坏女孩（合作音乐人：小凌）.m4a
+221:John Travolta and Samuel L. Jackson - Personality Goes A Long Way.m4a
+222:Shakira - Hips Don't Lie（合作音乐人：Wyclef Jean）.m4a
+223:Glenn Gould and Johann Sebastian Bach - The Art of the Fugue, BWV 1080: Contrapunctus I.m4a
+224:Pierre Bachelet - Les corons (Lyrics video).m4a
+225:Taylor Swift - Mine (Taylor's Version).m4a
+226:グリーンフェイス - DEAD or RAP！！！.m4a
+227:草東沒有派對 - 大風吹.m4a
+228:Naps - La kiffance.m4a
+229:Taylor Swift - Mine (Taylor's Version).m4a
+230:FAA_Music - Слуга Народа | Потап и Настя - Слуга Народа.m4a
+231:五月天 - 知足.m4a
+232:Oh Wonder - Technicolour Beat.m4a
+233:Oh Wonder - Midnight Moon.m4a
+234:Joe Hisaishi - Merry-Go-Round of Life (from 'Howl's Moving Castle').m4a
+235:Coldplay - The Scientist.m4a
+236:无情的蓝色 - 犬夜叉剧场版《穿越时空的思念》主题曲 穿越时空的思念.m4a
+237:majiko - アイロニ - Irony.m4a
+238:Sigrid - Strangers.m4a
+239:薛之謙 - 方圓幾里.m4a
+240:Taylor Swift - End Game（合作音乐人：Ed Sheeran和Future）.m4a
+241:madelline - dopamine.m4a
+242:Serrini - 放棄治療.m4a
+243:大主宰乐团和大主宰樂團 - 剪刀刺客 (动画《刺客伍六七》主题曲).m4a
+244:Oh Wonder - I Wish I Never Met You.m4a
+245:Lucienne Delyle - Mon amant de Saint-Jean.m4a
+246:Taylor Swift - Lover.m4a
+247:弗雷德里克·肖邦 - Chopin - Etude Op. 10 No. 1 (Waterfall).m4a
+248:Oh Wonder - All We Do (Official Audio).m4a
+249:Taylor Swift - Style.m4a
+250:李荣浩 - 对等关系（合作音乐人：张惠妹）.m4a
+251:洛天依 and 乐正绫 - 九九八十一.m4a
+252:PianoForest - 溯Reverse(钢琴版).m4a
+253:Hector A. Camarillo - Eagles - Hotel California (Lossless Audio).m4a
+254:黄龄 - 免我蹉跎苦.m4a
+255:卡丝卡达乐团 - Everytime We Touch - Radio Edit.m4a
+256:Taylor Swift - End Game（合作音乐人：Ed Sheeran和Future）.m4a
+257:Kool & The Gang - Fresh.m4a
+258:孔一蝉 - 爱YOU READY , 爱我READY.m4a
+259:TikTok Music Cloud - All My People - Alexandra Stan ♪ | 抖音好听洗脑的BGM | 抖音熱門 | 抖音 | TikTok.m4a
+260:Shakira - Acróstico (Milan + Sasha).m4a
+261:Alvaro Soler - Sofia [blank].m4a
+262:五月天 - 知足.m4a
+263:FIFTY FIFTY - Cupid (Twin Version).m4a
+264:卡丝卡达乐团 - Bad Boy.m4a
+265:Shakira - Whenever, Wherever.m4a
+266:周子琰 - 无论你多怪异我还是会喜欢你 (《刺客伍六七》动画推广版片尾曲).m4a
+267:Taylor Swift - Red.m4a
+268:W&W and 舞动精灵乐队 - God Is a Girl (Mixed).m4a
+269:Amayadori - 猫かぶり.m4a
+270:珂拉琪 Collage - 葬予規路火烌猶在.m4a
+271:Baltimore Symphony Orchestra、David Zinman、Richard Leech、Sylvia McNair、Choir of St. David's Episcopal Church、Choir of St. Michael and All Angels、Baltimore Symphony Orchestra Chorus和Hector Berlioz - La Marseillaise, H 51.m4a
+272:Mikann耙耙柑 - 醒 (完整版).m4a
+273:Iron Frill - FANTASTIC LOVERS.m4a
+274:曲婉婷 - Jar Of Love.m4a
+275:MARINA - To Be Human.m4a
+276:London Music Works - Theme (From "The Facts of Life").m4a
+277:MYTH & ROID - Endless Embrace.m4a
+278:阿尔·格林 - Let's Stay Together.m4a
+279:Cécile Corbel - Le Roi S'en Va Chasser.m4a
+280:达斯蒂·斯普林菲尔德 - Son of a Preacher Man.m4a
+281:酷玩乐队 - Viva la Vida.m4a
+282:*namirin - 「only my railgun」歌ってみた【＊なみりん】.m4a
+283:Earth, Wind & Fire - December (Based on "September").m4a
+284:Oh Wonder - The Rain.m4a
+285:Houkago Teatime - Utauyo!!MIRACLE.m4a
+286:Gambino - Copacabana.m4a
+287:Taylor Swift - Don’t Blame Me.m4a
+288:陈奕迅 - 好久不见.m4a
+289:许巍 - 曾经的你.m4a
+290:Ludovico Einaudi - Fly.m4a
+291:Baltimore Symphony Orchestra、David Zinman、Richard Leech、Sylvia McNair、Choir of St. David's Episcopal Church、Choir of St. Michael and All Angels、Baltimore Symphony Orchestra Chorus和Hector Berlioz - La Marseillaise, H 51.m4a
+292:TikTok Music Cloud - All My People - Alexandra Stan ♪ | 抖音好听洗脑的BGM | 抖音熱門 | 抖音 | TikTok.m4a
+293:Taylor Swift - Style.m4a
+294:周杰倫 - 牛仔很忙.m4a
+295:Kool & The Gang - Jungle Boogie.m4a
+296:Daishi Dance - Take Me Hand（合作音乐人：Cecile Corbel）.m4a
+297:周杰倫 - 花海.m4a
+298:Alisa - 溯Reverse (治愈版).m4a
+299:Oh Wonder - I Wish I Never Met You.m4a
+300:艾丝黛儿 - American Boy（合作音乐人：坎耶·韦斯特）.m4a
+301:李荣浩 - 不将就 (电影"何以笙箫默"片尾曲).m4a
+302:Black Myth: Wukong - ‘戒网’ - Black Myth: Wukong OST.m4a
+303:a-ha - Take on Me.m4a
+304:VC二次元मLY - 【洛天依原创】我的悲伤是水做的 【Luo Tianyi Original】Bad Bad Water.m4a
+305:assan1030kazim1050 - Sexion D'aussaut Samedi Soir.m4a
+306:Classical Music Only - J.S. Bach - Minuet and Badinerie from Orchestral Suite No. 2 in B.m4a
+307:*namirin - 「only my railgun」歌ってみた【＊なみりん】.m4a
+308:Taylor Swift - Daylight.m4a
+309:assan1030kazim1050 - Sexion D'aussaut Samedi Soir.m4a
+310:Bob Marley - No Woman No Cry.m4a
+311:AVROTROS Klassiek - Rachmaninoff: Piano Concerto no.2 op.18 - Anna Fedorova - Complete Live Concert - HD.m4a
+312:陈慧娴 - 千千阕歌.m4a
+313:FAA_Music - Слуга Народа | Потап и Настя - Слуга Народа.m4a
+314:Oh Wonder - Drive.m4a
+315:FIFTY FIFTY - Cupid (Twin Version).m4a
+316:Oh Wonder - Drive.m4a
+317:μ's - SUNNY DAY SONG.m4a
+318:w. zzang - 大乔小乔《农夫渔夫》.m4a
+319:李荣浩 - 不将就 (电影"何以笙箫默"片尾曲).m4a
+320:MARINA - To Be Human.m4a
+321:郑秀文 - 萨拉热窝的罗密欧与茱丽叶.m4a
+322:Seraphine, Jasmine Clarke and Absofacto - Childhood Dreams.m4a
+323:Ella Fitzgerald and Count Basie - Tea For Two.m4a
+324:Jerome Patrick Hoban - Jack Rabbit Slims Twist Contest.m4a
+325:LBI利比 - 小城夏天.m4a
+326:周杰倫 - 七里香.m4a
+327:John Travolta and Samuel L. Jackson - Personality Goes A Long Way.m4a
+328:洛天依, 言和 and 乐正绫 - 四重罪孽.m4a
+329:汉斯·季默 and 卡米尔 - Suis-moi (Reprise).m4a
+330:Goose house - 光るなら - Hikarunara.m4a
+331:Taylor Swift - Lover.m4a
+332:Oh Wonder - White Blood.m4a
+333:陳奕迅 - K歌之王 (國).m4a
+334:许巍 - 曾经的你.m4a
+335:2nd South Carolina String Band - Oh! Susanna.m4a
+336:Taylor Swift - Red.m4a
+337:田馥甄 - 還是要幸福(Still in happiness).m4a
+338:Taylor Swift - Blank Space.m4a
+339:徐良 - 坏女孩（合作音乐人：小凌）.m4a
+340:Iron Frill - FANTASTIC LOVERS.m4a
+341:Carly Rae Jepsen - Call Me Maybe.m4a
+342:Frank Peter Zimmermann, English Chamber Orchestra, Jeffrey Tate and Ludwig van Beethoven - Romance for Violin and Orchestra No. 2 in F Major, Op. 50.m4a
+343:大主宰乐团和大主宰樂團 - 剪刀刺客 (动画《刺客伍六七》主题曲).m4a
+344:Passenger - Let Her Go.m4a
+345:Taylor Swift - Love Story.m4a
+346:Houkago Teatime - ときめきシュガー.m4a
+347:MACK - Ludovico Einaudi - Una Mattina (Extended Remix).m4a
+348:邓丽君 - 又见炊烟.m4a
+349:London Music Works - Theme (From "The Facts of Life").m4a
+350:Houkago Teatime - 天使にふれたよ!.m4a
+351:五月天 - 洋蔥.m4a
+352:Taylor Swift - Look What You Made Me Do.m4a
+353:雷雨心 - 记·念.m4a
+354:Chansons, Folklore et Variété - Jacques Helian - En chantant hey di ho.m4a
+355:Mickaël Miro - L'horloge tourne.m4a
+356:王朝1982 - 成仙.m4a
+357:majiko - 命に嫌われている。 - Inochini Kirawareteiru.m4a
+358:Shakira - Whenever, Wherever.m4a
+359:郭顶 - 凄美地.m4a
+360:Serrini - 放棄治療.m4a
+361:VC二次元मLY - 【洛天依原创】我的悲伤是水做的 【Luo Tianyi Original】Bad Bad Water.m4a
+362:珂拉琪 Collage - 葬予規路火烌猶在.m4a
+363:Cécile Corbel - Le Roi S'en Va Chasser.m4a
+364:Pitbull and Kesha - Timber.m4a
+365:Simon & Garfunkel - The Sounds of Silence (Audio).m4a
+366:Bizarrap and Shakira - Shakira: Bzrp Music Sessions, Vol. 53.m4a
+367:Shakira - Acróstico (Milan + Sasha).m4a
+368:邓丽君 - 我只在乎你.m4a
+369:朴树 - 生如夏花.m4a
+370:G.E.M. 鄧紫棋 - 來自天堂的魔鬼.m4a
+371:呦猫UNEKO - 梦回还.m4a
+372:Alisa - 溯Reverse (治愈版).m4a
+373:【夢幻音樂 | 小提琴】低吟山嶺《60min》【放鬆/專注/作業BGM】.m4a
+374:Taylor Swift - 22.m4a
+375:ASU - ソラゴト.m4a
 playlist_end
