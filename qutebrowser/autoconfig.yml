@@ -12,6 +12,7 @@ settings:
     global: true
   content.javascript.clipboard:
     https://chatgpt.com: access-paste
+    https://docmee.cn: access-paste
     https://emacs-china.org: access-paste
     https://github.com: access-paste
     https://starship.rs: access-paste
