@@ -30,5 +30,7 @@ settings:
     global: ~/.config/qutebrowser/css/solarized-light-all-sites.css
   scrolling.smooth:
     global: false
+  tabs.background:
+    global: true
   tabs.show:
     global: multiple
