@@ -2,3 +2,7 @@ X detected
 Daemonizing, log output will be stored in /home/xinyu/.config/keyd/app.log...
 X detected
 Daemonizing, log output will be stored in /home/xinyu/.config/keyd/app.log...
+X protocol error:
+<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x02200039>, sequence_number = 16919, major_opcode = 2, minor_opcode = 0
+X protocol error:
+<class 'Xlib.error.BadWindow'>: code = 3, resource_id = <Resource 0x02200020>, sequence_number = 30028, major_opcode = 2, minor_opcode = 0
