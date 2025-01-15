@@ -87,7 +87,7 @@ maps.global = [
     description: "Create bookmark in linkding",
     callback: () => {
       var bookmarkUrl = window.location.href;
-      var applicationUrl = 'http://87.106.191.101:181/public.php?op=bookmarklets--subscribe&feed_url=%27';
+      var applicationUrl = 'http://87.106.191.101:181/public.php?op=bookmarklets--subscribe&feed_url=';
       applicationUrl +=  encodeURIComponent(bookmarkUrl);
       applicationUrl += '&auto_close';
       window.open(applicationUrl);
