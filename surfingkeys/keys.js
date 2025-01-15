@@ -81,6 +81,19 @@ maps.global = [
     }
   },
   {
+    alias: "gr",
+    //map: "cb",
+    category: categories.bookmarks,
+    description: "Create bookmark in linkding",
+    callback: () => {
+      var bookmarkUrl = window.location.href;
+      var applicationUrl = 'http://87.106.191.101:181/public.php?op=bookmarklets--subscribe&feed_url=%27';
+      applicationUrl +=  encodeURIComponent(bookmarkUrl);
+      applicationUrl += '&auto_close';
+      window.open(applicationUrl);
+    }
+  },
+  {
     alias: "<Ctrl-x>",
     category: categories.clipboard,
     description: "Copy text to Roam Research",
