@@ -216,3 +216,6 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+
+# AI
+export DEEPSEEK_API_KEY="sk-80b0aa04580e488f8bd5da534f55ea4a"

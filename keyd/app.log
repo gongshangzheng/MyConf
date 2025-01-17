@@ -2,3 +2,51 @@ X detected
 Daemonizing, log output will be stored in /home/xinyu/.config/keyd/app.log...
 X detected
 Daemonizing, log output will be stored in /home/xinyu/.config/keyd/app.log...
+X detected
+Daemonizing, log output will be stored in /home/xinyu/.config/keyd/app.log...
+/home/xinyu/.config/keyd/app.conf: Updated, reloading config...
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/Xlib/protocol/display.py", line 601, in send_and_recv
+    bytes_recv = self.socket.recv(count)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/bin/keyd-application-mapper", line 560, in <module>
+    mon.run()
+  File "/usr/local/bin/keyd-application-mapper", line 382, in run
+    for ev in new_interruptible_generator(self.dpy.fileno(), self.dpy.next_event, lambda: not self.dpy.pending_events()):
+  File "/usr/local/bin/keyd-application-mapper", line 106, in new_interruptible_generator
+    while not flushed_fn():
+              ^^^^^^^^^^^^
+  File "/usr/local/bin/keyd-application-mapper", line 382, in <lambda>
+    for ev in new_interruptible_generator(self.dpy.fileno(), self.dpy.next_event, lambda: not self.dpy.pending_events()):
+                                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/Xlib/display.py", line 192, in pending_events
+    return self.display.pending_events()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/Xlib/protocol/display.py", line 239, in pending_events
+    self.check_for_error()
+  File "/usr/lib/python3/dist-packages/Xlib/protocol/display.py", line 351, in check_for_error
+    raise err
+  File "/usr/local/bin/keyd-application-mapper", line 387, in run
+    win = get_active_window()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/bin/keyd-application-mapper", line 376, in get_active_window
+    win = get_floating_window()
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/bin/keyd-application-mapper", line 362, in get_floating_window
+    q.extend(w.query_tree().children)
+             ^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/Xlib/xobject/drawable.py", line 424, in query_tree
+    return request.QueryTree(display = self.display,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/Xlib/protocol/rq.py", line 1368, in __init__
+    self.reply()
+  File "/usr/lib/python3/dist-packages/Xlib/protocol/rq.py", line 1380, in reply
+    self._display.send_and_recv(request = self._serial)
+  File "/usr/lib/python3/dist-packages/Xlib/protocol/display.py", line 604, in send_and_recv
+    raise self.socket_error
+Xlib.error.ConnectionClosedError: Display connection closed by server: [Errno 104] Connection reset by peer
