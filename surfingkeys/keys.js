@@ -98,11 +98,6 @@ maps.global = [
     category: categories.clipboard,
     description: "Copy text to Roam Research",
     callback: () => {
-      // 获取当前页面的 URL 和标题
-      var url = location.href;
-      var title = document.title;
-
-      // 获取选中的文本内容并格式化为 HTML
       function getSelectedText() {
         var html = "";
         var sel = window.getSelection();
@@ -114,14 +109,13 @@ maps.global = [
           html = container.innerHTML;
         }
 
-        // 处理选中的内容，将指定的标签内容追加换行符
         var dataDom = document.createElement("div");
         dataDom.innerHTML = html;
         ['p', 'h1', 'h2', 'h3', 'h4'].forEach(function (tag) {
           dataDom.querySelectorAll(tag).forEach(function (item) {
             var content = item.innerHTML.trim();
             if (content.length > 0) {
-              item.innerHTML = content + '&#13;&#10;';
+              item.innerHTML = content + '<br>';
             }
           });
         });
@@ -129,18 +123,15 @@ maps.global = [
         return dataDom.innerText.trim();
       }
 
-      // 调用 OpenAI API
-      // 接口
-      const SERVICE = "openai";
-      // OpenAI API configuration
       const OPENAI = {
-        API_KEY: "sk-Jlqw3VNRB6cRbEbGRgvqCHgvS9c4K9jU8J1b6gCoit7EHEJ3", // Replace with your OpenAI API key.
-        MODEL: "gpt-4o", // Default model name, which can be changed as needed.
-        API_URL: "https://api.chatanywhere.org/v1/chat/completions", // Request address, which can be changed as needed.
+        API_KEY: "sk-Jlqw3VNRB6cRbEbGRgvqCHgvS9c4K9jU8J1b6gCoit7EHEJ3", // 替换为你的OpenAI API密钥
+        MODEL: "gpt-4",
+        API_URL: "https://api.openai.com/v1/chat/completions",
       };
+
       async function callOpenAI(text) {
         const prompt = `
-  Please generate a concise comment in Chinese that summarises its content in one sentance based on the following annotation tex, use up to 20 words and do not include anything in your ouput such as 'this annotation says' or "the annotation discusses'or any introductory phrases like "the annotation says":
+  Please generate a concise comment in Chinese that summarizes its content in one sentence based on the following annotation text, using up to 20 words and not including anything in your output such as 'this annotation says' or "the annotation discusses" or any introductory phrases like "the annotation says":
   ${text}
   `;
 
@@ -155,32 +146,29 @@ maps.global = [
         };
 
         try {
-          const xhr = await Zotero.HTTP.request(
-            "POST",
-            OPENAI.API_URL,
-            {
-              headers: {
-                'Authorization': `Bearer ${OPENAI.API_KEY}`,
-                'Content-Type': 'application/json; charset=utf-8',
-              },
-              body: JSON.stringify(data),
-              responseType: "json",
-            }
-          );
+          const response = await fetch(OPENAI.API_URL, {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${OPENAI.API_KEY}`,
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+          });
 
-          if (xhr && xhr.status && xhr.status === 200 && xhr.response.choices && xhr.response.choices.length > 0) {
+          if (response.ok) {
+            const result = await response.json();
             return {
               success: true,
-              result: xhr.response.choices[0].message.content.trim(),
+              result: result.choices[0].message.content.trim(),
             };
           } else {
+            const errorData = await response.json();
             return {
-              result: xhr.response.error ? xhr.response.error.message : 'Unknown error',
+              result: errorData.error ? errorData.error.message : 'Unknown error',
               success: false,
             };
           }
         } catch (error) {
-          //console.error('Error calling OpenAI API:', error);
           return {
             result: error.message,
             success: false,
@@ -189,48 +177,43 @@ maps.global = [
       }
 
       function formatForOrgRoam(title, text, comment) {
-        //const timestamp = new Date().toISOString();
-        // Get the current timestamp.
-        // 获取当前时间戳。
-
         return `
-  ${text}
-  -------------------------------------
-  ${comment}
+${text}
+-------------------------------------
+${comment}
   `;
-        //return `
-        //* Annotation for ${title}
-        //- Annotation: ${text}
-        //- Created on: ${timestamp}
-        //`;
-        // Format and return the annotation content.
-        // 格式化并返回注释内容。
       }
-      // 编码 URL，标题和选中的文本内容
-      const text = getSelectedText();
-      var title = encodeURIComponent(title);
-      let commentResult;
-      let success;
-      switch (SERVICE) {
-        case "openai":
-          ({ result: commentResult, success } = callOpenAI(annotationText));
-          break;
-        default:
-          commentResult = "Service Not Found";
-          success = false;
-      }
-      if (success){
-        var body = formatForOrgRoam(title, text, commentResult);
-      }else{
-        var body = getSelectedText();
-      }
-      var protocolUrl = 'org-protocol://roam-ref?template=r'
-        + '&ref=' + encodeURIComponent(url)
-        + '&title=' + encodeURIComponent(title)
-        + '&body=' + encodeURIComponent(body);
 
-      // 重定向到生成的 URL
-      location.href = protocolUrl;
+      async function main() {
+        var url = location.href;
+        var title = document.title;
+        const text = getSelectedText();
+
+        let commentResult;
+        let success;
+        try {
+          ({ result: commentResult, success } = await callOpenAI(text));
+        } catch (error) {
+          console.error('Error calling OpenAI API:', error);
+          commentResult = "API call failed";
+          success = false;
+        }
+
+        if (success) {
+          var body = formatForOrgRoam(title, text, commentResult);
+        } else {
+          var body = getSelectedText();
+        }
+
+        var protocolUrl = 'org-protocol://roam-ref?template=r'
+          + '&ref=' + encodeURIComponent(url)
+          + '&title=' + encodeURIComponent(title)
+          + '&body=' + encodeURIComponent(body);
+
+        location.href = protocolUrl;
+      }
+
+      main().catch(console.error);
     }
   },
   {
