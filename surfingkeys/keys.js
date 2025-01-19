@@ -213,7 +213,7 @@ maps.global = [
       let success;
       switch (SERVICE) {
         case "openai":
-          ({ result: commentResult, success } = await callOpenAI(annotationText));
+          ({ result: commentResult, success } = callOpenAI(annotationText));
           break;
         default:
           commentResult = "Service Not Found";
