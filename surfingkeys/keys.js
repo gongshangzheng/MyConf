@@ -125,8 +125,8 @@ maps.global = [
 
       const OPENAI = {
         API_KEY: "sk-Jlqw3VNRB6cRbEbGRgvqCHgvS9c4K9jU8J1b6gCoit7EHEJ3", // 替换为你的OpenAI API密钥
-        MODEL: "gpt-4",
-        API_URL: "https://api.openai.com/v1/chat/completions",
+        MODEL: "gpt-4o",
+        API_URL: "https://api.chatanywhere.org/v1/chat/completions",
       };
 
       async function callOpenAI(text) {
