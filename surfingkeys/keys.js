@@ -129,8 +129,101 @@ maps.global = [
         return dataDom.innerText.trim();
       }
 
+      // 调用 OpenAI API
+      // 接口
+      const SERVICE = "openai";
+      // OpenAI API configuration
+      const OPENAI = {
+        API_KEY: "sk-Jlqw3VNRB6cRbEbGRgvqCHgvS9c4K9jU8J1b6gCoit7EHEJ3", // Replace with your OpenAI API key.
+        MODEL: "gpt-4o", // Default model name, which can be changed as needed.
+        API_URL: "https://api.chatanywhere.org/v1/chat/completions", // Request address, which can be changed as needed.
+      };
+      async function callOpenAI(text) {
+        const prompt = `
+  Please generate a concise comment in Chinese that summarises its content in one sentance based on the following annotation tex, use up to 20 words and do not include anything in your ouput such as 'this annotation says' or "the annotation discusses'or any introductory phrases like "the annotation says":
+  ${text}
+  `;
+
+        const data = {
+          model: OPENAI.MODEL,
+          messages: [
+            { role: "system", content: "You are a helpful assistant for generating comments on annotations." },
+            { role: "user", content: prompt },
+          ],
+          max_tokens: 1000,
+          temperature: 0.2,
+        };
+
+        try {
+          const xhr = await Zotero.HTTP.request(
+            "POST",
+            OPENAI.API_URL,
+            {
+              headers: {
+                'Authorization': `Bearer ${OPENAI.API_KEY}`,
+                'Content-Type': 'application/json; charset=utf-8',
+              },
+              body: JSON.stringify(data),
+              responseType: "json",
+            }
+          );
+
+          if (xhr && xhr.status && xhr.status === 200 && xhr.response.choices && xhr.response.choices.length > 0) {
+            return {
+              success: true,
+              result: xhr.response.choices[0].message.content.trim(),
+            };
+          } else {
+            return {
+              result: xhr.response.error ? xhr.response.error.message : 'Unknown error',
+              success: false,
+            };
+          }
+        } catch (error) {
+          //console.error('Error calling OpenAI API:', error);
+          return {
+            result: error.message,
+            success: false,
+          };
+        }
+      }
+
+      function formatForOrgRoam(title, text, comment) {
+        //const timestamp = new Date().toISOString();
+        // Get the current timestamp.
+        // 获取当前时间戳。
+
+        return `
+  ${text}
+  -------------------------------------
+  ${comment}
+  `;
+        //return `
+        //* Annotation for ${title}
+        //- Annotation: ${text}
+        //- Created on: ${timestamp}
+        //`;
+        // Format and return the annotation content.
+        // 格式化并返回注释内容。
+      }
       // 编码 URL，标题和选中的文本内容
-      var body = getSelectedText();
+      const text = getSelectedText();
+      var title = encodeURIComponent(title);
+      let commentResult;
+      let success;
+      switch (SERVICE) {
+        case "openai":
+          ({ result: commentResult, success } = await callOpenAI(annotationText));
+          break;
+        default:
+          commentResult = "Service Not Found";
+          success = false;
+      }
+      if (success){
+        var body = formatForOrgRoam(title, text, commentResult);
+      }else{
+        var body = getSelectedText();
+      }
       var protocolUrl = 'org-protocol://roam-ref?template=r'
         + '&ref=' + encodeURIComponent(url)
         + '&title=' + encodeURIComponent(title)
