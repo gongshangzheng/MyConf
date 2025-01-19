@@ -131,7 +131,7 @@ maps.global = [
 
       async function callOpenAI(text) {
         const prompt = `
-  Please generate a concise comment in Chinese that summarizes its content in one sentence based on the following annotation text, using up to 20 words and not including anything in your output such as 'this annotation says' or "the annotation discusses" or any introductory phrases like "the annotation says":
+  Please generate a concise comment in Chinese that summarizes its content in one sentence based on the following annotation text, using up to 40 words and not including anything in your output such as 'this annotation says' or "the annotation discusses" or any introductory phrases like "the annotation says":
   ${text}
   `;
 
