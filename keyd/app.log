@@ -36,12 +36,15 @@ Traceback (most recent call last):
   File "/usr/local/bin/keyd-application-mapper", line 376, in get_active_window
     win = get_floating_window()
           ^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/bin/keyd-application-mapper", line 362, in get_floating_window
-    q.extend(w.query_tree().children)
-             ^^^^^^^^^^^^^^
-  File "/usr/lib/python3/dist-packages/Xlib/xobject/drawable.py", line 424, in query_tree
-    return request.QueryTree(display = self.display,
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/bin/keyd-application-mapper", line 364, in get_floating_window
+    v = w.get_full_property(_NET_WM_STATE, Xlib.Xatom.ATOM)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/Xlib/xobject/drawable.py", line 472, in get_full_property
+    prop = self.get_property(property, property_type, 0, sizehint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/Xlib/xobject/drawable.py", line 455, in get_property
+    r = request.GetProperty(display = self.display,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/usr/lib/python3/dist-packages/Xlib/protocol/rq.py", line 1368, in __init__
     self.reply()
   File "/usr/lib/python3/dist-packages/Xlib/protocol/rq.py", line 1380, in reply
