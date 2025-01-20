@@ -4,3 +4,5 @@ nvim/undodir/
 ./github-copilot/hosts.json
 keyd/app.log
 Thunar/accels.scm
+keyd/app.log
+/mpd/state
