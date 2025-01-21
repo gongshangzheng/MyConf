@@ -105,6 +105,7 @@ config.bind("s", "scroll down", "normal")
 config.bind("w", "scroll up", "normal")
 config.bind("x", "tab-close", "normal")
 config.bind("X", "undo", "normal")
+config.bind("i", "hint inputs", "normal")
 config.bind("<Alt-x>", "cmd-set-text :", "normal")
 
 # }}}
