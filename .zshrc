@@ -237,3 +237,5 @@ function y() {
 # AI
 export DEEPSEEK_API_KEY="sk-80b0aa04580e488f8bd5da534f55ea4a"
 export CODESTRAL_API_KEY="xXCcBYjjMSMp1FzBVdPEJplPr7uqCpJT"
+
+. "$HOME/.local/bin/env"
