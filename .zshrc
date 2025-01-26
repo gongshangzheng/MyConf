@@ -79,7 +79,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
         git
-        z
+        #z
         zsh-autosuggestions
         zsh-syntax-highlighting
 )
@@ -150,7 +150,7 @@ alias e-alacritty="emacsclient -n ~/.config/alacritty/alacritty.toml"
 alias e="emacsclient -n"
 
 export NODE_OPTIONS=--openssl-legacy-provider
-export APPLICATION_DIR="$HOME/application"
+export APPLICATION_DIR="$HOME/applications"
 alias rm="bash ~/scripts/tools/safe_rm/rm.sh"
 alias sgpt="/home/xinyu/scripts/py_scripts/.venv/bin/python -m sgpt"
 alias ml="bash ~/scripts/tools/ml.sh"
