@@ -237,5 +237,6 @@ function y() {
 # AI
 export DEEPSEEK_API_KEY="sk-80b0aa04580e488f8bd5da534f55ea4a"
 export CODESTRAL_API_KEY="xXCcBYjjMSMp1FzBVdPEJplPr7uqCpJT"
-export LD_LIBRARY_PATH=/usr/local/cuda-12.8/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-12.8/lib64:/usr/local/lib:$LD_LIBRARY_PATH
+export PATH=/usr/local/cuda-12.8/bin:$PATH
 . "$HOME/.local/bin/env"
