@@ -120,6 +120,7 @@ case $1 in
         link_config rofi
         link_config picom
         link_config mpd
+        link_config keyd
         link_config alacritty
         #link_config termite
         link_config qutebrowser
