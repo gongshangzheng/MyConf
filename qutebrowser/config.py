@@ -9,8 +9,8 @@
 #   Create Time   ：2024-12-16 15:58
 #   Description   ：
 # ===============================================================================
-import subprocess
-import os
+# import subprocess
+# import os
 from qutebrowser.api import interceptor
 import sys
 import theme
@@ -42,15 +42,15 @@ if sys.platform.startswith('darwin'):
     c.editor.command = ["mvim", "-f", "{file}", "-c", "normal {line}G{column0}1"]
     editor_value = "mvim"
 else:
-    editor_value = "gvim" # or "gvim"
+    editor_value = "neovide" # or "gvim"
     # editor_value,
     c.editor.command = [
-        "gvim",
-        "-f",
+        "neovide",
+        # "--",
         "{file}",
-        "-c",
-        "normal {line}G{column0}1",
+        "+call cursor({line}, {column0})",
     ]
+
 browser_value = "qutebrowser"
 
 # }}}

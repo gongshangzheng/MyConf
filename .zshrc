@@ -240,3 +240,5 @@ export CODESTRAL_API_KEY="xXCcBYjjMSMp1FzBVdPEJplPr7uqCpJT"
 export LD_LIBRARY_PATH=/usr/local/cuda-12.2/lib64:/usr/local/lib:$LD_LIBRARY_PATH
 export PATH=/usr/local/cuda-12.2/bin:$PATH
 . "$HOME/.local/bin/env"
+export OPENAI_API_KEY=sk-Jlqw3VNRB6cRbEbGRgvqCHgvS9c4K9jU8J1b6gCoit7EHEJ3
+export OPENAI_API_BASE=https://api.chatanywhere.org
