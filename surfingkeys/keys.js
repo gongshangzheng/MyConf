@@ -106,7 +106,7 @@ maps.global = [
     callback: () => {
       var url = location.href;
       var title = document.title;
-      var body = return `[[${url}][${title}]]`;
+      var body = `[[${url}][${title}]]`;
       var protocolUrl = 'org-protocol://roam-ref?template=r'
           + '&ref=' + encodeURIComponent(url)
           + '&title=' + encodeURIComponent(title)
