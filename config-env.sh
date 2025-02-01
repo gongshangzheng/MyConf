@@ -49,24 +49,28 @@ function file_to_link(){
 }
 
 function link_rc(){
-    if [ ! -f $HOME/MyConf/$1 ]; then
+    local source_file=$HOME/MyConf/$1
+    local target_file=${2:-$HOME/$1}  # Use $2 if provided, otherwise default to $HOME/$1
+
+    if [ ! -f "$source_file" ]; then
         echo "There is no $1 in MyConf"
         return
     fi
-    if [ ! -f $HOME/$1 ]; then
-        ln $HOME/MyConf/$1 $HOME/$1
+
+    if [ ! -f "$target_file" ]; then
+        ln "$source_file" "$target_file"
     else
-        # ask user
-        echo "You have already installed $1, do you want to replace it?"
+        echo "You have already installed $target_file, do you want to replace it?"
         read -p "(y/[n])" replace
-        if [ "$replace"  =  "y" ]; then
-            rm -rf $HOME/$1
-            ln $HOME/MyConf/$1 $HOME/$1
-        elif [[ "$replace"  =  "n" || "$replace"  =  "" ]]; then
+        if [ "$replace" = "y" ]; then
+            rm -rf "$target_file"
+            ln "$source_file" "$target_file"
+        elif [[ "$replace" = "n" || "$replace" = "" ]]; then
             return
         fi
     fi
 }
+
 
 #...
 
@@ -131,7 +135,7 @@ case $1 in
         fonts
         ;;
     rc)
-        link_rc $2
+        link_rc $2 $3
         ;;
     config)
         link_config $2
@@ -141,7 +145,8 @@ case $1 in
         ;;
     *)
         echo "Usage: $0 [all|rcs|configs]"
-        echo "Usage: $0 [rc|config] [file/dir]"
+        echo "Usage: $0 [rc] [file/dir] [destination]"
+        echo "Usage: $0 [config] [file/dir]"
         echo "Usage: $0 f2l [file/dir]"
         ;;
 esac
