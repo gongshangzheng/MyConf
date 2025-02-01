@@ -7,3 +7,4 @@ Thunar/accels.scm
 keyd/app.log
 /mpd/state
 keyd/app.log
+*.orig
