@@ -62,6 +62,12 @@ maps.global = [
     description: "URL in current tab",
   },
   {
+    alias: "gt",
+    map: "T",
+    category: categories.tabs,
+    description: "tab list",
+  },
+  {
     alias: "u",
     map: "X",
     description: "restore closed tab",
@@ -123,10 +129,15 @@ maps.global = [
         return dataDom.innerText.trim();
       }
 
+      // const OPENAI = {
+      //   API_KEY: "sk-Jlqw3VNRB6cRbEbGRgvqCHgvS9c4K9jU8J1b6gCoit7EHEJ3", // 替换为你的OpenAI API密钥
+      //   MODEL: "gpt-4o",
+      //   API_URL: "https://api.chatanywhere.org/v1/chat/completions",
+      // };
       const OPENAI = {
-        API_KEY: "sk-Jlqw3VNRB6cRbEbGRgvqCHgvS9c4K9jU8J1b6gCoit7EHEJ3", // 替换为你的OpenAI API密钥
-        MODEL: "gpt-4o",
-        API_URL: "https://api.chatanywhere.org/v1/chat/completions",
+        API_KEY: "sk-80b0aa04580e488f8bd5da534f55ea4a", // 替换为你的 DeepSeek API 密钥
+        MODEL: "deepseek-chat",  // DeepSeek 常用模型名称（请根据实际需求调整）
+        API_URL: "https://api.deepseek.com/v1/chat/completions", // DeepSeek 的 API 端点
       };
 
       async function callOpenAI(text) {
