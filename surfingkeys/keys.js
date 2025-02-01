@@ -106,15 +106,22 @@ maps.global = [
     callback: () => {
       var url = location.href;
       var title = document.title;
-<<<<<<< HEAD
-      // var body = `[[${url}][${title}]]`;
-      var protocolUrl = 'org-protocol://roam-ref?template=i'
-          + '&ref=' + encodeURIComponent(url)
-          + '&title=' + encodeURIComponent(title)
-          // + '&body=' + encodeURIComponent(body)
-      ;
 
-      location.href = protocolUrl;
+      // 弹窗让用户修改 URL 和标题
+      var newUrl = prompt("请修改 URL:", url);
+      var newTitle = prompt("请修改标题:", title);
+
+      if (newUrl !== null && newTitle !== null) {
+        try {
+          var protocolUrl = 'org-protocol://roam-ref?template=i'
+              + '&ref=' + encodeURIComponent(newUrl)
+              + '&title=' + encodeURIComponent(newTitle);
+
+          location.href = protocolUrl;
+        } catch (error) {
+          alert("提交时出错: " + error.message);
+        }
+      }
     }
   },
   {
@@ -235,10 +242,6 @@ ${comment}
         }
 
         var protocolUrl = 'org-protocol://roam-ref?template=t'
-=======
-      var body = `[[${url}][${title}]]`;
-      var protocolUrl = 'org-protocol://roam-ref?template=r'
->>>>>>> fd2759d (copy c)
           + '&ref=' + encodeURIComponent(url)
           + '&title=' + encodeURIComponent(title)
           + '&body=' + encodeURIComponent(body);
