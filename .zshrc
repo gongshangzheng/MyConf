@@ -149,37 +149,6 @@ alias e-dict="emacsclient -n ~/.config/ibus/rime/wubi86_jidian.dict.yaml"
 alias e-alacritty="emacsclient -n ~/.config/alacritty/alacritty.toml"
 alias e="emacsclient -n"
 
-export NODE_OPTIONS=--openssl-legacy-provider
-export APPLICATION_DIR="$HOME/applications"
-alias rm="bash ~/scripts/tools/safe_rm/rm.sh"
-alias sgpt="/home/xinyu/scripts/py_scripts/.venv/bin/python -m sgpt"
-alias ml="bash ~/scripts/tools/ml.sh"
-alias gs="git status"
-alias ga="git add"
-alias gc="git commit"
-alias gp="git push"
-alias gd="git diff"
-alias gl="git log"
-alias gpl="git pull"
-alias gco="git checkout"
-alias gcb="git checkout -b"
-alias gb="git branch"
-alias gm="git merge"
-alias n="nvim"
-alias mgit="bash /home/xinyu/scripts/tools/mgit.sh"
-alias t1="bash /home/xinyu/scripts/tools/1.sh"
-#export hypermenu="~/scripts/dmenu/hypermenu/hypermenu"
-export BROWSER="qutebrowser"
-export EDITOR="nvim"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-ZSH_DISABLE_COMPFIX=true
-alias qutebrowser="bash ~/scripts/tools/open-qutebrowser.sh"
-alias umpv=~/scripts/tools/umpv
-source $ZSH/oh-my-zsh.sh
 
 
 # Starship 
