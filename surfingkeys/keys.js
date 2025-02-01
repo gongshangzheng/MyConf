@@ -106,7 +106,6 @@ maps.global = [
     callback: () => {
       var url = location.href;
       var title = document.title;
-<<<<<<< HEAD
       // var body = `[[${url}][${title}]]`;
       var protocolUrl = 'org-protocol://roam-ref?template=i'
           + '&ref=' + encodeURIComponent(url)
@@ -235,10 +234,6 @@ ${comment}
         }
 
         var protocolUrl = 'org-protocol://roam-ref?template=t'
-=======
-      var body = `[[${url}][${title}]]`;
-      var protocolUrl = 'org-protocol://roam-ref?template=r'
->>>>>>> fd2759d (copy c)
           + '&ref=' + encodeURIComponent(url)
           + '&title=' + encodeURIComponent(title)
           + '&body=' + encodeURIComponent(body);
