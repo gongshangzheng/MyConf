@@ -100,6 +100,23 @@ maps.global = [
     }
   },
   {
+    alias: "yc",
+    category: categories.clipboard,
+    description: "Drop current url in emacs inbox",
+    callback: () => {
+      var url = location.href;
+      var title = document.title;
+      // var body = `[[${url}][${title}]]`;
+      var protocolUrl = 'org-protocol://roam-ref?template=i'
+          + '&ref=' + encodeURIComponent(url)
+          + '&title=' + encodeURIComponent(title)
+          // + '&body=' + encodeURIComponent(body)
+      ;
+
+      location.href = protocolUrl;
+    }
+  },
+  {
     alias: "<Ctrl-x>",
     category: categories.clipboard,
     description: "Copy text to Roam Research",
