@@ -132,6 +132,7 @@ alias n-keyd="nvim /etc/keyd/default.conf"
 alias n-app-key="nvim ~/.config/keyd/app.conf"
 alias n-dict="nvim ~/.config/ibus/rime/wubi86_jidian.dict.yaml"
 alias n-alacritty="nvim ~/.config/alacritty/alacritty.toml"
+alias n="nvim"
 
 alias e-bspwm="emacsclient -n ~/.config/bspwm/bspwmrc"
 alias e-sxhkd="emacsclient -n ~/.config/sxhkd/sxhkdrc"
@@ -211,3 +212,7 @@ export PATH=/usr/local/cuda-12.2/bin:$PATH
 . "$HOME/.local/bin/env"
 export OPENAI_API_KEY=sk-Jlqw3VNRB6cRbEbGRgvqCHgvS9c4K9jU8J1b6gCoit7EHEJ3
 export OPENAI_API_BASE=https://api.chatanywhere.org
+# git alias
+alias gs="git status"
+# node
+source $HOME/.nvm/nvm.sh
