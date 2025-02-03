@@ -106,6 +106,12 @@ maps.global = [
     callback: () => {
       var url = location.href;
       var title = document.title;
+      // var body = `[[${url}][${title}]]`;
+      var protocolUrl = 'org-protocol://roam-ref?template=i'
+          + '&ref=' + encodeURIComponent(url)
+          + '&title=' + encodeURIComponent(title)
+          // + '&body=' + encodeURIComponent(body)
+      ;
 
       // 弹窗让用户修改 URL 和标题
       var newUrl = prompt("请修改 URL:", url);
