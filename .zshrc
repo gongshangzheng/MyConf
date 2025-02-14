@@ -134,23 +134,24 @@ alias n-dict="nvim ~/.config/ibus/rime/wubi86_jidian.dict.yaml"
 alias n-alacritty="nvim ~/.config/alacritty/alacritty.toml"
 alias n="nvim"
 
-alias e-bspwm="emacsclient -n ~/.config/bspwm/bspwmrc"
-alias e-sxhkd="emacsclient -n ~/.config/sxhkd/sxhkdrc"
-alias e-zshrc="emacsclient -n ~/.zshrc && source ~/.zshrc"
-alias e-polybar="emacsclient -n ~/.config/polybar/hack"
-alias e-polybar-bar="emacsclient -n ~/.config/polybar/hack/bar.ini"
-alias e-polybar-config="emacsclient -n ~/.config/polybar/hack/config.ini"
-alias e-polybar-modules="emacsclient -n ~/.config/polybar/hack/modules.ini"
-alias e-polybar-custom-modules="emacsclient -n ~/.config/polybar/hack/user_modules.ini"
-alias e-picom="emacsclient -n ~/.config/picom/picom.conf"
-alias eonfig-env="bash ~/MyConf/config-env.sh"
-alias e-keyd="emacsclient -n /etc/keyd/default.conf"
-alias e-app-key="emacsclient -n ~/.config/keyd/app.conf"
-alias e-dict="emacsclient -n ~/.config/ibus/rime/wubi86_jidian.dict.yaml"
-alias e-alacritty="emacsclient -n ~/.config/alacritty/alacritty.toml"
-alias e="emacsclient -n"
+alias e-bspwm="xdotool search --class emacs windowactivate && emacsclient -n ~/.config/bspwm/bspwmrc"
+alias e-sxhkd="xdotool search --class emacs windowactivate && emacsclient -n ~/.config/sxhkd/sxhkdrc"
+alias e-zshrc="xdotool search --class emacs windowactivate && emacsclient -n ~/.zshrc && source ~/.zshrc"
+alias e-polybar="xdotool search --class emacs windowactivate && emacsclient -n ~/.config/polybar/hack"
+alias e-polybar-bar="xdotool search --class emacs windowactivate && emacsclient -n ~/.config/polybar/hack/bar.ini"
+alias e-polybar-config="xdotool search --class emacs windowactivate && emacsclient -n ~/.config/polybar/hack/config.ini"
+alias e-polybar-modules="xdotool search --class emacs windowactivate && emacsclient -n ~/.config/polybar/hack/modules.ini"
+alias e-polybar-custom-modules="xdotool search --class emacs windowactivate && emacsclient -n ~/.config/polybar/hack/user_modules.ini"
+alias e-picom="xdotool search --class emacs windowactivate && emacsclient -n ~/.config/picom/picom.conf"
+alias e-config-env="bash ~/MyConf/config-env.sh"
+alias e-keyd="xdotool search --class emacs windowactivate && emacsclient -n /etc/keyd/default.conf"
+alias e-app-key="xdotool search --class emacs windowactivate && emacsclient -n ~/.config/keyd/app.conf"
+alias e-dict="xdotool search --class emacs windowactivate && emacsclient -n ~/.config/ibus/rime/wubi86_jidian.dict.yaml"
+alias e-alacritty="xdotool search --class emacs windowactivate && emacsclient -n ~/.config/alacritty/alacritty.toml"
+alias e="xdotool search --class emacs windowactivate && emacsclient -n $@"
 
-
+alias ml="bash ~/scripts/tools/ml.sh"
+alias fr-chat="/home/xinyu/Code/FrenchAssistant/.venv/bin/python /home/xinyu/Code/FrenchAssistant/chat.py"
 
 # Starship 
 eval "$(starship init zsh)"
@@ -189,10 +190,11 @@ alias nzo="~/scripts/tools/zoxide_openfiles_nvim.sh"
 # Next level of an ls 
 # options :  --no-filesize --no-time --no-permissions 
 alias ls="eza --no-filesize --color=always --icons=always --no-user" 
-
+alias lss="du -ah --max-depth=1 | sort -h"
 # tree
 alias tree="tree -L 3 -a -I '.git' --charset X "
 alias dtree="tree -L 3 -a -d -I '.git' --charset X "
+alias sgpt=""
 
 #yazi
 function y() {
@@ -205,14 +207,31 @@ function y() {
 }
 
 # AI
-export DEEPSEEK_API_KEY="sk-80b0aa04580e488f8bd5da534f55ea4a"
 export CODESTRAL_API_KEY="xXCcBYjjMSMp1FzBVdPEJplPr7uqCpJT"
+export DEEPSEEK_API_KEY="sk-80b0aa04580e488f8bd5da534f55ea4a"
 export LD_LIBRARY_PATH=/usr/local/cuda-12.2/lib64:/usr/local/lib:$LD_LIBRARY_PATH
 export PATH=/usr/local/cuda-12.2/bin:$PATH
 . "$HOME/.local/bin/env"
 export OPENAI_API_KEY=sk-Jlqw3VNRB6cRbEbGRgvqCHgvS9c4K9jU8J1b6gCoit7EHEJ3
 export OPENAI_API_BASE=https://api.chatanywhere.org
+export FRENCH_ASSISTANT_HISTORY="/home/xinyu/Code/showCSVorJSON/data/"
 # git alias
 alias gs="git status"
 # node
 source $HOME/.nvm/nvm.sh
+
+export CONDA_HOME="/home/xinyu/miniconda3"
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/xinyu/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/xinyu/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/xinyu/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/xinyu/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<

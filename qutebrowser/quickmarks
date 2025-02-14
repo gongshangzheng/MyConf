@@ -57,3 +57,4 @@ roam javascript:(function()%7Bjavascript%3Alocation.href%20%3D%20'org-protocol%3
 distro-emacs-config https://gitlab.com/dwt1/dotfiles/-/blob/master/.config/doom/config.org#org-publish
 capture-template https://emacsdocs.org/docs/org/Capture-templates
 magit https://magit.vc/manual/magit/Branch-Commands.html
+react https://zh-hans.react.dev/learn
