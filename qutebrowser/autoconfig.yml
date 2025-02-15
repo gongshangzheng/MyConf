@@ -11,7 +11,7 @@ settings:
   colors.tabs.pinned.selected.even.bg:
     global: black
   colors.webpage.darkmode.enabled:
-    global: false
+    global: true
   content.javascript.clipboard:
     https://chatgpt.com: access-paste
     https://docmee.cn: access-paste

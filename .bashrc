@@ -137,9 +137,9 @@ export CUDA_HOME=/usr/local/cuda-12.6
 export PATH=/usr/local/bin:$PATH
 eval "$(starship init bash)"
 export my_rsshub_addr="http://87.106.191.101:1200"
-. "$HOME/.cargo/env"
 set -o vi
 
 set vi-ins-mode-string \1\e[5 q\2
 set vi-cmd-mode-string \1\e[2 q\2
-source /home/xinyu/scripts/env/aliases.sh
+
+. "$HOME/.local/bin/env"
