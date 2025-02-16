@@ -9,17 +9,38 @@
 
 ;; Indicate which modules to import to access the variables
 ;; used in this configuration.
+
+(define-module (your-module)
+  ;; ...
+  ;; some stuff here
+  ;; ...
+  #:use-module (nongnu packages nvidia))
+(define transform
+  (options->transformation
+   '((with-graft . "mesa=nvda"))))
+
+ (define %xorg-config
+   "Section \"Device\"
+      Identifier     \"Device0\"
+      Driver         \"nvidia\"
+      VendorName     \"NVIDIA Corporation\"
+      BoardName      \"GeForce GTX 1050 Ti\"
+  EndSection")
+
 (use-modules (gnu) (nongnu packages linux))
+(use-modules (guix transformations))
 (use-service-modules cups desktop networking ssh xorg)
 
 (operating-system
  (kernel linux)
  (firmware (list linux-firmware))
-  (locale "en_GB.utf8")
-  (timezone "Europe/Paris")
-  (keyboard-layout (keyboard-layout "us"))
-  (host-name "guiz")
-
+ (locale "en_GB.utf8")
+ (timezone "Europe/Paris")
+ (keyboard-layout (keyboard-layout "us"))
+ (host-name "guiz")
+ (kernel-arguments (append
+                    '("modprobe.blacklist=nouveau")
+                    %default-kernel-arguments))
   ;; The list of user accounts ('root' is implicit).
   (users (cons* (user-account
                   (name "xinyu")
@@ -43,7 +64,20 @@
   ;; services, run 'guix system search KEYWORD' in a terminal.
   (services
    (append (list (service gnome-desktop-service-type)
-
+                 (simple-service
+                  'custom-udev-rules udev-service-type
+                  (list nvidia-driver))
+                 (service kernel-module-loader-service-type
+                          '("ipmi_devintf"
+                            "nvidia"
+                            "nvidia_modeset"
+                            "nvidia_uvm"))
+                 (service slim-service-type
+                          (slim-configuration
+                           (xorg-configuration (xorg-configuration
+                                                (modules (cons* nvidia-driver %default-xorg-modules))
+                                                (server (transform xorg-server))
+                                                (drivers '("nvidia"))))))
                  ;; To configure OpenSSH, pass an 'openssh-configuration'
                  ;; record as a second argument to 'service' below.
                  (service openssh-service-type)
