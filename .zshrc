@@ -223,7 +223,7 @@ alias gs="git status"
 # node
 source $HOME/.nvm/nvm.sh
 # uv
-source $HOME/.local/bin/env
+# source $HOME/.local/bin/env
 
 export CONDA_HOME="/home/xinyu/miniconda3"
 # >>> conda initialize >>>

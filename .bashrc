@@ -142,4 +142,3 @@ set -o vi
 set vi-ins-mode-string \1\e[5 q\2
 set vi-cmd-mode-string \1\e[2 q\2
 
-. "$HOME/.local/bin/env"

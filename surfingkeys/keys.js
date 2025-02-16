@@ -80,7 +80,7 @@ maps.global = [
     description: "Create bookmark in linkding",
     callback: () => {
       var bookmarkUrl = window.location.href;
-      var applicationUrl = 'http://16.171.150.115:9090/bookmarks/new';
+      var applicationUrl = 'http://87.106.191.101:9090/bookmarks/new';
       applicationUrl += '?url=' + encodeURIComponent(bookmarkUrl);
       applicationUrl += '&auto_close';
       window.open(applicationUrl);
@@ -106,12 +106,6 @@ maps.global = [
     callback: () => {
       var url = location.href;
       var title = document.title;
-      // var body = `[[${url}][${title}]]`;
-      var protocolUrl = 'org-protocol://roam-ref?template=i'
-          + '&ref=' + encodeURIComponent(url)
-          + '&title=' + encodeURIComponent(title)
-          // + '&body=' + encodeURIComponent(body)
-      ;
 
       // 弹窗让用户修改 URL 和标题
       var newUrl = prompt("请修改 URL:", url);
