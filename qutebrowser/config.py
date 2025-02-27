@@ -143,7 +143,7 @@ config.bind("gs", "doi")
 # config.bind("<Ctrl+x>", "quickmark-load roam")
 config.bind("<Ctrl+x>", "jseval -f ~/scripts/jscripts/org-roam-protocol.js")
 config.bind("<Ctrl+X>", "jseval -f ~/scripts/jscripts/org-roam-protocol-temp.js")
-config.bind("cb", "open -t http://16.171.150.115:9090/bookmarks/new?url={url}&auto_close")
+config.bind("cb", "open -t http://87.106.191.101:9090/bookmarks/new?url={url}&auto_close")
 config.bind("gr", "open -t http://87.106.191.101:181/public.php?op=bookmarklets--subscribe&&feed_url={url}")
 
 #config.bind("<Ctrl-r>", "open javascript:location.href='org-protocol://roam-ref?template=r&ref='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title)")

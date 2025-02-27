@@ -209,8 +209,7 @@ function y() {
 # AI
 export CODESTRAL_API_KEY="xXCcBYjjMSMp1FzBVdPEJplPr7uqCpJT"
 export DEEPSEEK_API_KEY="sk-80b0aa04580e488f8bd5da534f55ea4a"
-export LD_LIBRARY_PATH=/usr/local/cuda-12.2/lib64:/usr/local/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=/gnu/store/zzpbp6rr43smwxzvzd4qd317z5j7qblj-gcc-11.4.0-lib/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
 export PATH=/usr/local/cuda-12.2/bin:$PATH
 # . "$HOME/.local/bin/env"
 export OPENAI_API_KEY=sk-Jlqw3VNRB6cRbEbGRgvqCHgvS9c4K9jU8J1b6gCoit7EHEJ3
