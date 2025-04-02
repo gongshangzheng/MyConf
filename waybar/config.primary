@@ -1,0 +1,24 @@
+{
+  "output": "eDP-1",
+  "height": "3vh",
+  "modules-left": ["hyprland/workspaces"],
+    "spacer": {
+        "format": " ",  // 内容为空或空格
+        "width": 20     // 指定宽度（像素）
+    },
+
+    "modules-right": [
+        "network",
+        "custom/spacer",
+        "custom/ibus",  // 输入法模块（需单独定义）
+        "custom/spacer",
+        "cpu",
+        "custom/spacer",
+        "memory",
+        "custom/spacer",
+        "pulseaudio",
+        "custom/spacer",
+        "clock"
+    ],
+    "include": "~/.config/waybar/modules.json",  // 导入公共模块
+}

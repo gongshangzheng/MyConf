@@ -1,0 +1,42 @@
+// ~/.config/waybar/modules.json
+{
+    "memory": {
+        "format": "󰍛 {percentage}%",
+        "interval": 5,
+        "tooltip": true
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "interval": 2
+    },
+    "network": {
+        "format": " ↓{bandwidthDownBytes} ↑{bandwidthUpBytes}",
+        "interval": 1
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-icons": ["", "", ""]
+    },
+    "custom/ibus": {
+        "exec": "~/.config/waybar/scripts/ibus.sh",  // 运行脚本
+        "return-type": "",  // 直接输出文本
+        "interval": 1,      // 每秒更新一次
+        "format": "{}",     // 显示脚本输出
+    "on-click": "ibus engine rime",  // 切换到rime
+    "on-click-right": "ibus engine xkb:us::eng",  // 右键切换到eng
+        "tooltip": false
+    },
+    "clock": {
+        "format": " {:%H:%M}",
+        "tooltip": true
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "custom/spacer": {
+        "format": " ",  // 内容为空或空格
+        "width": 20     // 指定宽度（像素）
+    },
+
+}

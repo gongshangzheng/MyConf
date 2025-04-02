@@ -1,0 +1,35 @@
+{
+  // 主屏配置 (eDP-1)
+  "output": "eDP-1",
+  "height": 30,  // 主屏高度(像素)或使用百分比
+  "position": "top",
+  "modules-left": ["hyprland/workspaces", "tray"],
+  "modules-center": ["clock"],
+  "modules-right": ["pulseaudio", "network"],
+
+  // 副屏配置 (HDMI-A-3)
+  "output": "HDMI-A-3",
+  "height": 27,  // 副屏更细的栏
+  "position": "top",
+  "modules-left": ["custom/spotify"],
+  "modules-right": ["battery", "temperature"],
+
+  // 通用设置
+  "spacing": 4,
+  "layer": "top",
+
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["network", "pulseaudio", "battery", "tray"],
+
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "persistent_workspaces": {
+      "1": [], "2": [], "3": [], "4": [], "5": []
+    }
+  },
+}
+
+{
+"style": "~/.config/waybar/style.css"
+}

@@ -1,0 +1,68 @@
+/* Solarized Dark 主题 - 修正版 */
+@define-color base03 #002b36;
+@define-color base02 #073642;
+@define-color base01 #586e75;
+@define-color base00 #657b83;
+@define-color base0 #839496;
+@define-color base1 #93a1a1;
+@define-color base2 #eee8d5;
+@define-color base3 #fdf6e3;
+@define-color yellow #b58900;
+@define-color orange #cb4b16;
+@define-color red #dc322f;
+@define-color magenta #d33682;
+@define-color violet #6c71c4;
+@define-color blue #268bd2;
+@define-color cyan #2aa198;
+@define-color green #859900;
+
+/* 修正后的选择器语法 */
+window#waybar {
+  background: @base03;
+  color: @base0;
+  border-bottom: 2px solid @base02;
+  font-family: "JetBrains Mono Nerd Font", monospace;
+  font-size: 13px;
+}
+
+#workspaces button {
+  padding: 0 8px;
+  color: @base1;
+  background: @base02;
+  border-top: 2px solid transparent;
+}
+
+#workspaces button.active {
+  color: @base3;
+  background: @base01;
+  border-top-color: @blue;
+}
+
+#clock {
+  color: @cyan;
+  font-weight: bold;
+}
+
+#battery {
+  color: @green;
+}
+#battery.warning {
+  color: @yellow;
+}
+#battery.critical {
+  color: @red;
+}
+
+#network {
+  color: @violet;
+}
+#network.disconnected {
+  color: @orange;
+}
+
+#pulseaudio {
+  color: @magenta;
+}
+#pulseaudio.muted {
+  color: @base01;
+}

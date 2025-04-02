@@ -1,0 +1,35 @@
+/* Solarized Dark 配色方案 */
+window {
+    background-color: rgba(0, 43, 54, 0.9); /* 背景色 #002b36 带透明度 */
+    border: 2px solid #268bd2;              /* 边框色（Solarized 蓝） */
+    border-radius: 8px;                     /* 圆角 */
+    font-family: "Fira Code", monospace;
+}
+
+/* 输入框样式 */
+#input {
+    color: #839496;         /* 文字色（浅灰） */
+    background-color: #073642; /* 输入框背景色（深绿灰） */
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* 列表项样式 */
+#entry {
+    color: #839496;         /* 默认文字色 */
+    padding: 8px;
+}
+
+/* 选中项高亮 */
+#entry:selected {
+    background-color: #268bd2; /* Solarized 蓝 */
+    color: #fdf6e3;          /* 高亮文字色（浅黄白） */
+}
+
+/* 分类标题样式 */
+#category {
+    color: #859900;         /* Solarized 绿 */
+    padding: 6px 8px;
+    font-weight: bold;
+}

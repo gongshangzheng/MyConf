@@ -1,0 +1,18 @@
+{
+  "output": "HDMI-A-3",
+  "height": "2vh",
+    "custom/spacer": {
+        "format": " ",  // 内容为空或空格
+        "width": 20     // 指定宽度（像素）
+    },
+  "modules-left": ["hyprland/workspaces", "custom/gpu"],
+  "modules-center": ["hyprland/window"],  // 窗口标题居中
+   "modules-right": [
+        "pulseaudio",  // 音量控制
+        "custom/spacer",
+        "battery",     // 电池状态
+        "custom/spacer",
+        "clock"        // 时间
+    ],
+"include": "~/.config/waybar/modules.json",  // 导入公共模块
+}}

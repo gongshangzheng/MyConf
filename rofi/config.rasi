@@ -1,1 +1,8 @@
-@theme "/home/xinyu/.local/share/rofi/themes/rounded-nord-dark.rasi"
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    icon-theme: "Papirus";
+    width: 30%;
+    lines: 10;
+}
+
