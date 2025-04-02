@@ -246,3 +246,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+export QT_QPA_PLATFORMTHEME=qt6ct

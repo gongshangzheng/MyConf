@@ -1,0 +1,9 @@
+[Colors:View]
+BackgroundNormal=#2E2E2E
+
+[KDE]
+ShowDeleteCommand=true
+
+[PreviewSettings]
+EnableRemoteFolderThumbnail=false
+MaximumRemoteSize=0

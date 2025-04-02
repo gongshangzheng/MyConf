@@ -1,0 +1,59 @@
+QMenuBar{
+}
+
+QMenu::item {
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	padding-top: 0.6em;
+	padding-bottom: 0.6em;
+	margin-bottom: 5px;
+	border-color: 
+	qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 blue, stop: 1 red) red
+	qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 blue, stop: 1 red) blue;
+
+}
+QMenu::item:selected {
+	background: #4a4a4a;
+	border: 0em solid #4a4a4a;
+	border-radius: 8px;
+}
+QMenu::item:disabled {
+	background-color: #363636;
+	color: #a8a8a8;
+	border-radius: 0px;
+	border: 0.0em solid #4e5052;
+}
+
+/* 设置默认字体 */
+* {
+    font-family: "Arial";
+    font-size: 12pt;
+    color: #ffffff; /* 白色字体 */
+}
+
+/* 适用于按钮的字体 */
+QPushButton {
+    font-family: "Arial";
+    font-size: 14pt;
+    color: #ffffff;
+    background-color: #333333; /* 按钮背景颜色 */
+}
+
+/* 适用于标签的字体 */
+QLabel {
+    font-family: "Arial";
+    font-size: 12pt;
+    color: #dddddd; /* 标签文本颜色 */
+}
+/* 设置文件名的字体颜色和大小 */
+QListView::item {
+    font-size: 14pt;
+    color: #ffffff;  /* 文件名的颜色 */
+}
+
+/* 如果文件被选中，修改选中文件的颜色 */
+QListView::item:selected {
+    color: #000000;  /* 选中文件的颜色 */
+    background-color: #555555; /* 选中文件的背景色 */
+}
+

@@ -1,0 +1,26 @@
+MenuBar=Disabled
+
+[General]
+AutoExpandFolders=true
+EditableUrl=true
+ShowToolTips=true
+UseTabForSwitchingSplitView=true
+Version=202
+ViewPropsTimestamp=2025,3,28,15,10,32.257
+
+[IconsMode]
+UseSystemFont=false
+ViewFont=Source Han Sans CN,9,-1,5,316,0,1,0,0,0,0,0,0,0,0,1,Normal
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[MainWindow]
+MenuBar=Disabled
+
+[PreviewSettings]
+Plugins=appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,imagethumbnail,jpegthumbnail,jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,svgthumbnail,gdk-pixbuf-thumbnailer
+
+[UiSettings]
+ColorScheme=Kvantum Dark
