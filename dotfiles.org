@@ -1,0 +1,34 @@
+#+TITLE: Dotfiles Management
+#+AUTHOR: Your Name
+#+STARTUP: content
+
+* Shell Configuration
+** Zsh
+#+begin_src sh :tangle ~/.zshrc
+# Your zsh configuration will go here
+#+end_src
+
+** Bash
+#+begin_src sh :tangle ~/.bashrc
+# Your bash configuration will go here
+#+end_src
+
+* MPV Configuration
+#+begin_src conf :tangle ~/.config/mpv/mpv.conf
+# Your MPV configuration will go here
+#+end_src
+
+* Git Configuration
+#+begin_src gitconfig :tangle ~/.gitconfig
+[user]
+    name = Your Name
+    email = your@email.com
+#+end_src
+
+* SSH Configuration
+#+begin_src sshconfig :tangle ~/.ssh/config
+# SSH client configuration
+Host *
+    AddKeysToAgent yes
+    IdentityFile ~/.ssh/id_ed25519
+#+end_src
