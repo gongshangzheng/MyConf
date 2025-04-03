@@ -1,0 +1,19 @@
+#+TITLE: MPV Configuration
+#+AUTHOR: Your Name
+#+STARTUP: content
+
+* Scripts
+** playlistmanager.lua
+#+begin_src lua :tangle mpv/scripts/playlistmanager.lua
+-- Contents will be automatically inserted from original file when tangled
+#+end_src
+
+** recent.lua
+#+begin_src lua :tangle mpv/scripts/recent.lua
+-- Contents will be automatically inserted from original file when tangled
+#+end_src
+
+** thumbfast.lua
+#+begin_src lua :tangle mpv/scripts/thumbfast.lua
+-- Contents will be automatically inserted from original file when tangled
+#+end_src

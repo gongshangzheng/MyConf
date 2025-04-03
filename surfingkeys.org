@@ -1,0 +1,18 @@
+#+TITLE: SurfingKeys Configuration  
+#+AUTHOR: Your Name
+#+STARTUP: content
+
+* Main Configuration
+#+begin_src js :tangle surfingkeys/conf.priv.js
+// Contents will be automatically inserted from original file when tangled
+#+end_src
+
+* Key Mappings
+#+begin_src js :tangle surfingkeys/keys.js
+// Contents will be automatically inserted from original file when tangled
+#+end_src
+
+* Custom Functions  
+#+begin_src js :tangle surfingkeys_custom.js
+// Contents will be automatically inserted from original file when tangled
+#+end_src
