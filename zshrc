@@ -215,6 +215,7 @@ export DEEPSEEK_API_KEY="sk-80b0aa04580e488f8bd5da534f55ea4a"
 export GLFW_IM_MODULE=ibus
 export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
 export PATH=/opt/cuda/bin:$PATH
+export PATH="/home/xinyu/.local/bin:$PATH"
 # . "$HOME/.local/bin/env"
 export OPENAI_API_KEY=sk-Jlqw3VNRB6cRbEbGRgvqCHgvS9c4K9jU8J1b6gCoit7EHEJ3
 export OPENAI_API_BASE=https://api.chatanywhere.org
@@ -227,7 +228,6 @@ alias gs="git status"
 source $HOME/.nvm/nvm.sh
 # uv
 # source $HOME/.local/bin/env
-
 export CONDA_HOME="/home/xinyu/miniconda3"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
